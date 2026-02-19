@@ -41,16 +41,35 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-10">
-          {["home", "services", "about", "contact"].map((item) => (
-            <li key={item} className="group relative cursor-pointer">
-              <a href={`#${item}`} className="text-white hover:text-orange-500 transition">
-                {item.charAt(0).toUpperCase() + item.slice(1)}
-              </a>
 
-              {/* underline animation */}
-              <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
-            </li>
-          ))}
+          <li className="group relative cursor-pointer">
+            <a href="home" className="text-white hover:text-orange-500 transition">
+              Home
+            </a>
+            <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+          </li>
+
+          <li className="group relative cursor-pointer">
+            <a href="service-page" className="text-white hover:text-orange-500 transition">
+              Services
+            </a>
+            <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+          </li>
+
+          <li className="group relative cursor-pointer">
+            <a href="about-page" className="text-white hover:text-orange-500 transition">
+              About
+            </a>
+            <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+          </li>
+
+          <li className="group relative cursor-pointer">
+            <a href="contact-page" className="text-white hover:text-orange-500 transition">
+              Contact
+            </a>
+            <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+          </li>
+
         </ul>
 
         {/* Mobile Menu Button */}
@@ -70,17 +89,31 @@ const Navbar = () => {
         ${open ? "max-h-60 py-4" : "max-h-0"}`}
       >
         <ul className="flex flex-col items-center gap-6">
-          {["home", "services", "about", "contact"].map((item) => (
-            <li key={item}>
-              <a
-                href={`#${item}`}
-                onClick={() => setOpen(false)}
-                className="text-white hover:text-orange-500 transition"
-              >
-                {item.charAt(0).toUpperCase() + item.slice(1)}
-              </a>
-            </li>
-          ))}
+
+          <li>
+            <a href="home" onClick={() => setOpen(false)} className="text-white hover:text-orange-500 transition">
+              Home
+            </a>
+          </li>
+
+          <li>
+            <a href="service-page" onClick={() => setOpen(false)} className="text-white hover:text-orange-500 transition">
+              Services
+            </a>
+          </li>
+
+          <li>
+            <a href="about-page" onClick={() => setOpen(false)} className="text-white hover:text-orange-500 transition">
+              About
+            </a>
+          </li>
+
+          <li>
+            <a href="contact-page" onClick={() => setOpen(false)} className="text-white hover:text-orange-500 transition">
+              Contact
+            </a>
+          </li>
+
         </ul>
       </div>
     </header>
