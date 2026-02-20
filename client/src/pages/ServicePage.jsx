@@ -11,8 +11,8 @@ const ServicePage = () => {
       <Header />
       <Hero />
       <Stats />
-      <CTA/>
-      <Services/>
+      <CTA />
+      <Services />
       <Footer />
     </div>
   )
