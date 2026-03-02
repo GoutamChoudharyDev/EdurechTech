@@ -4,6 +4,8 @@ dotenv.config();
 
 import express from 'express';
 import cookieParser from "cookie-parser";
+import contactRoutes from "./routes/contact.route.js";
+import cors from "cors"
 
 // Initialize Express app
 const app = express();
@@ -13,8 +15,11 @@ const app = express();
 // Middleware to parse JSON bodies
 app.use(express.json());
 
-// Middleware to parse URL-encoded bodies
-app.use(express.urlencoded({ extended: true }));
+// cors
+app.use(cors({
+    origin: "http://localhost:5173", // Replace with your frontend URL
+    credentials: true, // Allow cookies to be sent
+}))
 
 // cookiesimport cookieParser from "cookie-parser";
 app.use(cookieParser());
@@ -24,5 +29,7 @@ app.use(cookieParser());
 app.get("/", (req, res) => {
     res.send("Backend is running!");
 });
+
+app.use("/api", contactRoutes)
 
 export default app;

@@ -1,6 +1,41 @@
-import React from "react";
+import { useState } from "react";
+import api from "../../service/api";
+import { toast } from "react-toastify";
 
 const Contact = () => {
+  // useStates
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [contactNumber, setContactNumber] = useState("");
+  const [service, setService] = useState("");
+  const [message, setMessage] = useState("");
+
+  // handleSubmit
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      await api.post("/api/contact", {
+        name,
+        email,
+        contactNumber,
+        service,
+        message
+      })
+
+      setName("");
+      setEmail("");
+      setContactNumber("");
+      setService("");
+      setMessage("");
+
+      // alert("contact form submition successfully")
+      toast.success("contact form submition successfully!")
+    } catch (error) {
+      toast.error(error.response?.data?.message || "contact form submition failed!")
+    }
+  }
+
   return (
     <section id="contact" className="py-24 bg-[#111111] text-white">
 
@@ -11,6 +46,7 @@ const Contact = () => {
 
       {/* Form Card */}
       <form
+        onSubmit={handleSubmit}
         id="contact-form"
         className="max-w-2xl mx-auto px-8 md:px-16 py-16 rounded-2xl
         bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a]
@@ -25,6 +61,8 @@ const Contact = () => {
             name="user_name"
             placeholder="Your Name"
             required
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             className="w-full p-2 mt-2 rounded-lg bg-[#0a0a0a] border border-[#333]
             focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500
             transition-all duration-300"
@@ -39,6 +77,8 @@ const Contact = () => {
             name="user_email"
             placeholder="Your Email"
             required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className="w-full p-2 mt-2 rounded-lg bg-[#0a0a0a] border border-[#333]
             focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500
             transition-all duration-300"
@@ -53,6 +93,8 @@ const Contact = () => {
             name="user_phone"
             placeholder="Mobile No"
             required
+            value={contactNumber}
+            onChange={(e) => setContactNumber(e.target.value)}
             className="w-full p-2 mt-2 rounded-lg bg-[#0a0a0a] border border-[#333]
             focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500
             transition-all duration-300"
@@ -65,6 +107,8 @@ const Contact = () => {
           <select
             name="user_service"
             required
+            value={service}
+            onChange={(e) => setService(e.target.value)}
             className="w-full p-2 mt-2 rounded-lg bg-[#0a0a0a] border border-[#333]
             text-white focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500
             transition-all duration-300"
@@ -87,6 +131,8 @@ const Contact = () => {
             rows="5"
             placeholder="Your Message"
             required
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
             className="w-full p-2 mt-2 rounded-lg bg-[#0a0a0a] border border-[#333]
             focus:outline-none focus:border-orange-500 focus:ring-1 focus:ring-orange-500
             transition-all duration-300 resize-none"
