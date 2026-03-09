@@ -107,7 +107,7 @@ const services = [
 
 const Services = () => {
     return (
-        <section id="services" className="bg-white text-black pt-24 pb-28 rounded-t-[40px]">
+        <section id="services" className="bg-white text-black md:pt-10 pt-10 pb-10 md:pb-10 rounded-t-[40px]">
             <div className="max-w-6xl mx-auto px-6">
 
                 {/* Title */}

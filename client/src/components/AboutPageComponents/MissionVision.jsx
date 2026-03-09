@@ -2,17 +2,17 @@ import React from "react";
 
 const MissionVision = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="md:pt-10 md:pb-10 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Title */}
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-14 relative inline-block left-1/2 -translate-x-1/2">
+        <h2 className="text-4xl md:text-5xl font-bold text-center relative inline-block left-1/2 -translate-x-1/2">
           Our Mission & Vision
           <span className="absolute left-1/2 -translate-x-1/2 -bottom-4 w-20 h-1 rounded-full bg-gradient-to-r from-[#ff6b35] to-[#f7931e]" />
         </h2>
 
         {/* Grid */}
-        <div className="grid md:grid-cols-2 gap-12 mt-12">
+        <div className="grid md:grid-cols-2 gap-12 mt-16">
 
           {/* Mission Card */}
           <div className="bg-white p-10 rounded-[15px] shadow-[0_10px_30px_rgba(0,0,0,0.1)] 

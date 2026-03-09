@@ -1,7 +1,7 @@
 const Hero = () => {
     return (
         <main className="p-0">
-            <section className="relative text-center py-[120px] text-white overflow-hidden
+            <section className="relative text-center flex flex-col items-center justify-center min-h-screen text-white overflow-hidden
 bg-gradient-to-br from-[#0f172a] via-[#020617] to-[#020617]">
 
                 {/* Floating Shapes */}
@@ -27,21 +27,21 @@ bg-gradient-to-br from-[#0f172a] via-[#020617] to-[#020617]">
                 </div>
 
                 {/* Content */}
-                <div className="relative z-[2] max-w-7xl mt-28 mx-auto">
+                <div className="relative z-[2] max-w-7xl mx-auto px-6">
 
-                    <h1 className="text-2xl md:text-7xl mb-5 font-bold
+                    <h1 className="text-3xl sm:text-5xl md:text-7xl mb-5 font-bold
 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent animate-slideDown">
 
                         Powering Careers & Businesses with
 
-                        <span className="block mt-6 md:mt-10">
+                        <span className="block mt-4 md:mt-6">
                             Future-Ready Technology
                         </span>
 
                     </h1>
 
 
-                    <p className="text-xl md:text-2xl mb-8 opacity-90 animate-fadeUp mt-11">
+                    <p className="text-lg md:text-2xl mb-6 opacity-90 animate-fadeUp">
                         Cloud • AI • Software • IT Consulting • Career Enablement
                     </p>
 
@@ -52,7 +52,6 @@ bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent animate-sl
                         resume marketing, and interview readiness — we don’t just provide
                         services, we deliver outcomes.
                     </p>
-
                 </div>
             </section>
         </main>

@@ -7,12 +7,15 @@ import Services from "../components/ServicePageComponents/Services"
 
 const ServicePage = () => {
   return (
-    <div>
+    <div >
       <Header />
-      <Hero />
-      <Stats />
-      <CTA />
-      <Services />
+      <main className="pt-24 md:pt-12">
+        <Hero />
+        <Stats />
+        <CTA />
+        <Services />
+      </main>
+
       <Footer />
     </div>
   )

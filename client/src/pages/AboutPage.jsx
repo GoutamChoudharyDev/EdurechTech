@@ -11,12 +11,15 @@ const AboutPage = () => {
   return (
     <>
       <Header />
-      <Hero />
-      <About />
-      <MissionVision />
-      <Values />
-      <Team />
-      <Testimonials />
+      <main className="pt-24 md:pt-12">
+        <Hero />
+        <About />
+        <MissionVision />
+        <Values />
+        <Team />
+        <Testimonials />
+      </main>
+      
       <Footer />
     </>
   )

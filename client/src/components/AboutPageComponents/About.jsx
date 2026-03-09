@@ -11,7 +11,7 @@ const About = () => {
         <section
             id="about"
             ref={ref}
-            className="py-20 bg-gray-50"
+            className="md:pt-12 pt-10 pb-6 md:pb-4 bg-gray-50"
         >
             <div className="max-w-6xl mx-auto px-6 text-center">
 

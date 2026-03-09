@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import { Link } from "react-router-dom"
 
 const Hero = () => {
 
@@ -14,7 +15,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative h-screen flex items-start justify-center pt-[120px] text-center
+      className="relative h-screen flex items-center justify-center text-center
       bg-gradient-to-br from-[#0a0a0a] to-[#1a1a1a] overflow-hidden"
     >
 
@@ -63,27 +64,27 @@ animate-[slideInUp_1s_ease-out]">
         <div className="flex gap-4 justify-center flex-wrap
         animate-[slideInUp_1s_ease-out_0.4s_both]">
 
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="px-[30px] py-[12px] rounded-full font-bold text-white
-            bg-gradient-to-br from-[#ff6b00] to-[#ff9500]
-            transition-all duration-300
-            hover:-translate-y-[2px]
-            hover:shadow-[0_10px_30px_rgba(255,107,0,0.3)]"
+    bg-gradient-to-br from-[#ff6b00] to-[#ff9500]
+    transition-all duration-300
+    hover:-translate-y-[2px]
+    hover:shadow-[0_10px_30px_rgba(255,107,0,0.3)]"
           >
             Book Your Expert Call
-          </a>
+          </Link>
 
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="px-[30px] py-[12px] rounded-full font-bold
-            text-[#ff6b00] border-2 border-[#ff6b00]
-            transition-all duration-300
-            hover:-translate-y-[2px]
-            hover:shadow-[0_10px_30px_rgba(255,107,0,0.3)]"
+    text-[#ff6b00] border-2 border-[#ff6b00]
+    transition-all duration-300
+    hover:-translate-y-[2px]
+    hover:shadow-[0_10px_30px_rgba(255,107,0,0.3)]"
           >
             Get Started
-          </a>
+          </Link>
 
         </div>
       </div>

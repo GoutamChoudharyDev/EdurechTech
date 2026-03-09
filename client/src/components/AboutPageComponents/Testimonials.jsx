@@ -8,16 +8,16 @@ const Testimonials = () => {
     ];
 
     return (
-        <section id="testimonials" className="py-24 bg-[#f8f9fa] text-[#333] relative z-[1]">
+        <section id="testimonials" className="pt-6 bg-[#f8f9fa] md:pt-12 md:pb-14 text-[#333] relative z-[1]">
             <div className="max-w-6xl mx-auto px-6">
 
                 {/* Title */}
-                <h2 className="text-4xl font-bold text-center mb-16">
+                <h2 className="text-4xl font-bold text-center mb-6">
                     Client Success Stories
                 </h2>
 
                 {/* Grid auto-fit */}
-                <div className="grid [grid-template-columns:repeat(auto-fit,minmax(350px,1fr))] gap-8 mt-12">
+                <div className="grid [grid-template-columns:repeat(auto-fit,minmax(350px,1fr))] gap-8 ">
 
                     {testimonials.map((t, i) => (
                         <div
@@ -67,7 +67,7 @@ const Testimonials = () => {
                 </div>
             </div>
         </section>
-        
+
     );
 };
 

@@ -17,7 +17,7 @@ const Team = () => {
   return (
     <>
       {/* TEAM SECTION */}
-      <section className="py-20 bg-gray-50">
+      <section className="pt-6 pb-8 md:pt-12 md:pb-12 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
 
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-14 relative inline-block left-1/2 -translate-x-1/2">
@@ -25,7 +25,7 @@ const Team = () => {
             <span className="absolute left-1/2 -translate-x-1/2 -bottom-4 w-20 h-1 rounded-full bg-gradient-to-r from-[#ff6b35] to-[#f7931e]" />
           </h2>
 
-          <div className="grid [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))] gap-8 mt-12">
+          <div className="grid [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))] gap-8">
             {team.map((m, i) => (
               <div
                 key={i}

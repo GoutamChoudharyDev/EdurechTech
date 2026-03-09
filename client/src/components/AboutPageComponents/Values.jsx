@@ -9,7 +9,7 @@ const Values = () => {
   ];
 
   return (
-    <section className="py-20">
+    <section className="pt-6 md:pt-10 md:pb-12">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Title */}
@@ -19,7 +19,7 @@ const Values = () => {
         </h2>
 
         {/* Grid */}
-        <div className="grid [grid-template-columns:repeat(auto-fit,minmax(280px,1fr))] gap-8 mt-12">
+        <div className="grid [grid-template-columns:repeat(auto-fit,minmax(280px,1fr))] gap-8">
 
           {values.map((v, i) => (
             <div
@@ -28,7 +28,7 @@ const Values = () => {
                          shadow-[0_10px_30px_rgba(0,0,0,0.1)]
                          transition-transform duration-300 hover:-translate-y-2.5"
             >
-              
+
               {/* Icon */}
               <div className="w-[70px] h-[70px] mx-auto mb-4 rounded-full
                               flex items-center justify-center text-2xl text-white
