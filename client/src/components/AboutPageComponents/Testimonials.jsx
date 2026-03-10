@@ -8,7 +8,7 @@ const Testimonials = () => {
     ];
 
     return (
-        <section id="testimonials" className="pt-6 bg-[#f8f9fa] md:pt-12 md:pb-14 text-[#333] relative z-[1]">
+        <section id="testimonials" className="pt-6 pb-8 bg-[#f8f9fa] md:pt-12 md:pb-14 text-[#333] relative z-[1]">
             <div className="max-w-6xl mx-auto px-6">
 
                 {/* Title */}
@@ -17,22 +17,23 @@ const Testimonials = () => {
                 </h2>
 
                 {/* Grid auto-fit */}
-                <div className="grid [grid-template-columns:repeat(auto-fit,minmax(350px,1fr))] gap-8 ">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                     {testimonials.map((t, i) => (
                         <div
                             key={i}
                             className="
-                bg-white p-8 rounded-[15px]
-                border border-[#e0e0e0]
-                shadow-[0_8px_25px_rgba(0,0,0,0.1)]
-                transition-transform duration-300
-                hover:scale-105
-              "
+        bg-white px-4 py-6 md:px-6 md:py-10
+        rounded-[15px]
+        border border-[#e0e0e0]
+        shadow-[0_8px_25px_rgba(0,0,0,0.1)]
+        transition-transform duration-300
+        hover:scale-105
+      "
                         >
 
                             {/* Quote */}
-                            <p className="text-[1.1rem] italic mb-4 leading-7">
+                            <p className="text-[1rem] md:text-[1.1rem] italic mb-4 leading-7">
                                 "{t.quote}"
                             </p>
 
@@ -40,12 +41,15 @@ const Testimonials = () => {
                             <div className="flex items-center gap-4 mt-4">
 
                                 {/* Avatar */}
-                                <div className="
-                  w-[50px] h-[50px] rounded-full
-                  flex items-center justify-center
-                  font-bold text-[1.2rem] text-white
-                  bg-gradient-to-br from-[#ff6b35] to-[#f7931e]
-                ">
+                                <div
+                                    className="
+            w-[45px] h-[45px] md:w-[50px] md:h-[50px]
+            rounded-full
+            flex items-center justify-center
+            font-bold text-[1.1rem] md:text-[1.2rem] text-white
+            bg-gradient-to-br from-[#ff6b35] to-[#f7931e]
+          "
+                                >
                                     {t.initials}
                                 </div>
 
