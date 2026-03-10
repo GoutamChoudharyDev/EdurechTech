@@ -1,7 +1,7 @@
 const About = () => {
   return (
-    <section id="about" className="py-24 bg-[#0a0a0a] text-white">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 px-6 items-center">
+    <section id="about" className="pt-5 pb-8 md:pt-23 md:pb-23 bg-[#0a0a0a] text-white">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 px-6 items-center">
 
         {/* Left Content */}
         <div>
@@ -16,7 +16,7 @@ const About = () => {
           </p>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 gap-6 mt-8">
+          <div className="grid grid-cols-2 gap-6 mt-4">
 
             {[
               { num: "500+", label: "Projects Completed" },

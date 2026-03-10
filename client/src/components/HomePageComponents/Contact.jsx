@@ -37,10 +37,10 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-24 bg-[#111111] text-white">
+    <section id="contact" className="pt-5 pb-8 md:pt-6 md:pb-10 bg-[#111111] text-white">
 
       {/* Title */}
-      <h2 className="text-4xl md:text-5xl text-center font-bold mb-14 text-orange-500 animate-fadeUp">
+      <h2 className="text-4xl md:text-5xl text-center font-bold mb-6 text-orange-500 animate-fadeUp">
         Get In Touch
       </h2>
 
@@ -48,13 +48,13 @@ const Contact = () => {
       <form
         onSubmit={handleSubmit}
         id="contact-form"
-        className="max-w-2xl mx-auto px-8 md:px-16 py-16 rounded-2xl
+        className="md:max-w-2/5 max-w-2xl mx-4 md:mx-auto px-8 md:px-14 py-8 rounded-2xl
         bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a]
-        space-y-6 animate-fadeUp delay-200"
+        space-y-4 animate-fadeUp delay-200"
       >
 
         {/* Name */}
-        <div className="space-y-2">
+        <div>
           <label className="text-sm font-semibold">Name</label>
           <input
             type="text"

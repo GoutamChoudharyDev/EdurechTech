@@ -9,15 +9,15 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 bg-[#111111] text-white">
+    <section id="services" className="pt-5 pb-8 md:pt-6 md:pb-10 bg-[#111111] text-white">
       
       {/* Title */}
-      <h2 className="text-4xl md:text-5xl text-center font-bold mb-16 text-orange-500">
+      <h2 className="text-4xl md:text-5xl text-center font-bold mb-4 md:mb-8 text-orange-500">
         Our Services
       </h2>
 
       {/* Cards */}
-      <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto px-6">
+      <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto px-6">
         {services.map((s, i) => (
           <div
             key={i}

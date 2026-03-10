@@ -40,7 +40,6 @@ bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent animate-sl
 
                     </h1>
 
-
                     <p className="text-lg md:text-2xl mb-6 opacity-90 animate-fadeUp">
                         Cloud • AI • Software • IT Consulting • Career Enablement
                     </p>
@@ -55,8 +54,6 @@ bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent animate-sl
                 </div>
             </section>
         </main>
-
-
     );
 };
 

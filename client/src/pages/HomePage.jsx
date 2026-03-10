@@ -9,10 +9,12 @@ const HomePage = () => {
   return (
     <>
       <Navbar />
-      <Hero />
-      <Services />
-      <About />
-      <Contact />
+      <main className="pt-5 md:pt-3">
+        <Hero />
+        <Services />
+        <About />
+        <Contact />
+      </main>
       <Footer />
     </>
   )
