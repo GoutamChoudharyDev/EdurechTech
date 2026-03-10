@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom"
-import HomePage from "./pages/HomePage"
-import AboutPage from "./pages/AboutPage"
-import CareerPage from "./pages/CareerPage"
-import ServicePage from "./pages/ServicePage"
+import HomePage from "./pages/normal/HomePage"
+import AboutPage from "./pages/normal/AboutPage"
+import CareerPage from "./pages/normal/CareerPage"
+import ServicePage from "./pages/normal/ServicePage"
 
 const App = () => {
   return (
