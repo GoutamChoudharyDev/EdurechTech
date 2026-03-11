@@ -1,12 +1,13 @@
 import { Router } from "express";
 import { createJobs, deleteJobs, getJobs, updateJobs } from "../controllers/job.controller.js";
+import { adminAuth } from "../middleware/adminAuth.middleware.js";
 
 const router = Router();
 
 // Api end points (Admin Api's)
-router.post("/admin/jobs", createJobs);
-router.put("/admin/jobs/:id", updateJobs);
-router.delete("/admin/jobs/:id", deleteJobs);
+router.post("/admin/jobs", adminAuth, createJobs);
+router.put("/admin/jobs/:id", adminAuth, updateJobs);
+router.delete("/admin/jobs/:id", adminAuth, deleteJobs);
 
 // User Api
 router.get("/jobs", getJobs);
