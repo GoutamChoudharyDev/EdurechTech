@@ -4,8 +4,12 @@ dotenv.config();
 
 import express from 'express';
 import cookieParser from "cookie-parser";
-import contactRoutes from "./routes/contact.route.js";
 import cors from "cors"
+
+// import Routes
+import contactRoutes from "./routes/contact.route.js";
+import jobRoutes from "./routes/job.route.js";
+import applicationRoute from "./routes/application.route.js";
 
 // Initialize Express app
 const app = express();
@@ -30,6 +34,9 @@ app.get("/", (req, res) => {
     res.send("Backend is running!");
 });
 
-app.use("/api", contactRoutes)
+// Api EndPoints........................................
+app.use("/api", contactRoutes);
+app.use("/api", jobRoutes);
+app.use("/api", applicationRoute);
 
 export default app;

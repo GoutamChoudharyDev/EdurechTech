@@ -1,13 +1,14 @@
 import { useState } from "react";
 
 const Hero = () => {
+
+    // fetch jobs
+
     const [formData, setFormData] = useState({
         name: "",
         phone: "",
         email: "",
-        jobDomain: "",
         experience: "",
-        details: "",
         resume: null,
     });
 
@@ -86,13 +87,6 @@ const Hero = () => {
         hover:border-orange-400 hover:bg-orange-50
         peer-checked:border-orange-500"
                                 >
-                                    <input
-                                        type="radio"
-                                        name="jobDomain"
-                                        value={job}
-                                        onChange={handleChange}
-                                        className="peer accent-orange-500"
-                                    />
 
                                     <span className="text-gray-700 peer-checked:text-orange-600 font-medium">
                                         {job}
@@ -106,9 +100,9 @@ const Hero = () => {
                         onChange={handleChange}
                         className="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400" />
 
-                    <textarea name="details" placeholder="Other Details" required rows={4}
+                    {/* <textarea name="details" placeholder="Other Details" required rows={4}
                         onChange={handleChange}
-                        className="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none" />
+                        className="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400 resize-none" /> */}
 
                     <div>
                         <h2 className="font-semibold mb-2 text-gray-700">Upload Your Resume</h2>
