@@ -6,6 +6,7 @@ import express from 'express';
 import cookieParser from "cookie-parser";
 import contactRoutes from "./routes/contact.route.js";
 import cors from "cors"
+import adminRoutes from "./routes/admin.route.js"
 
 // Initialize Express app
 const app = express();
@@ -31,5 +32,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api", contactRoutes)
+
+app.use("/api/admin", adminRoutes)
 
 export default app;
