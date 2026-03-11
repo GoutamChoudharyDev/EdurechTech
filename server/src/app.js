@@ -5,6 +5,7 @@ dotenv.config();
 import express from 'express';
 import cookieParser from "cookie-parser";
 import cors from "cors"
+import adminRoutes from "./routes/admin.route.js"
 
 // import Routes
 import contactRoutes from "./routes/contact.route.js";
@@ -38,5 +39,7 @@ app.get("/", (req, res) => {
 app.use("/api", contactRoutes);
 app.use("/api", jobRoutes);
 app.use("/api", applicationRoute);
+
+app.use("/api/admin", adminRoutes)
 
 export default app;
