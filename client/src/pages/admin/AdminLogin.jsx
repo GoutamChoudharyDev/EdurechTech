@@ -26,9 +26,9 @@ export default function AdminLogin() {
         {/* Brand Header */}
         <header className="text-center mb-8">
 
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#ff6b00] to-[#ff9500] mb-4 shadow-lg shadow-orange-500/20">
+          {/* <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#ff6b00] to-[#ff9500] mb-4 shadow-lg shadow-orange-500/20"> */}
 
-            <svg
+            {/* <svg
               className="h-8 w-8 text-white"
               fill="none"
               stroke="currentColor"
@@ -40,9 +40,9 @@ export default function AdminLogin() {
                 strokeLinejoin="round"
                 strokeWidth="2"
               />
-            </svg>
+            </svg> */}
 
-          </div>
+          {/* </div> */}
 
           <h1 className="text-3xl font-bold text-white tracking-tight">
             Admin Login
