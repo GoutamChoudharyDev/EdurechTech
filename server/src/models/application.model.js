@@ -7,7 +7,7 @@ const applicationSchema = new Schema({
         required: [true, "name is required"],
     },
     phone: {
-        type: String,
+        type: Number,
         required: [true, "phone number is required"],
     },
     email: {

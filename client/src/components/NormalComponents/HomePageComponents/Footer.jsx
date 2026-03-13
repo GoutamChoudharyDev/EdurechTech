@@ -1,4 +1,17 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
+  // Quicklinks array
+  const quickLinks = [
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about-page" },
+    { name: "Services", path: "/service-page" },
+    { name: "Portfolio", path: "/portfolio" },
+    { name: "Blog", path: "/blog" },
+    { name: "Contact", path: "/contact" },
+    { name: "Career Opportunities", path: "/career-page" },
+  ];
+
   return (
     <footer className="bg-gradient-to-br from-[#2c3e50] to-[#34495e] text-white pt-16 pb-6">
 
@@ -49,20 +62,14 @@ const Footer = () => {
               Quick Links
             </h3>
             <ul className="space-y-2 text-gray-300">
-              {[
-                "Home",
-                "About Us",
-                "Services",
-                "Portfolio",
-                "Blog",
-                "Contact",
-                "Career Opportunities",
-              ].map((link, i) => (
-                <li
-                  key={i}
-                  className="hover:text-orange-500 cursor-pointer transition"
-                >
-                  {link}
+              {quickLinks.map((link, i) => (
+                <li key={i}>
+                  <Link
+                    to={link.path}
+                    className="hover:text-orange-500  transition"
+                  >
+                    {link.name}
+                  </Link>
                 </li>
               ))}
             </ul>

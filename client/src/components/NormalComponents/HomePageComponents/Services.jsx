@@ -10,7 +10,7 @@ const services = [
 const Services = () => {
   return (
     <section id="services" className="pt-5 pb-8 md:pt-6 md:pb-10 bg-[#111111] text-white">
-      
+
       {/* Title */}
       <h2 className="text-4xl md:text-5xl text-center font-bold mb-4 md:mb-8 text-orange-500">
         Our Services
