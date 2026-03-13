@@ -1,20 +1,38 @@
 import { useState } from "react";
-import  api  from "../../service/api"
+import api from "../../service/api";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export default function AdminLogin() {
-
+  // useState
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-    
+
+  // useNavigate
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    
     try {
-        const response = await api.post("/api/admin/login", {email, password});
-        console.log("Login Response:", response.data);
+      await api.post("/api/admin/login",
+        {
+          email,
+          password
+        });
+
+      // navigate to admin dashboard
+      navigate("/admin-dashboard")
+
+      // set empty
+      setEmail("");
+      setPassword("");
+
+      // toast
+      toast.success("Admin login successfull")
     } catch (error) {
-        console.log("Login Error:", error);
+      toast.error(error.response?.data?.message || "Error during Admin Login")
+      console.log("Login Error:", error);
     }
   };
 
@@ -26,23 +44,14 @@ export default function AdminLogin() {
         {/* Brand Header */}
         <header className="text-center mb-8">
 
-          {/* <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#ff6b00] to-[#ff9500] mb-4 shadow-lg shadow-orange-500/20"> */}
-
-            {/* <svg
-              className="h-8 w-8 text-white"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-              />
-            </svg> */}
-
-          {/* </div> */}
+          <div
+            className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#ff6b00] to-[#ff9500] mb-4 shadow-lg shadow-orange-500/20">
+            <img
+              src="/logo-icon.png"
+              alt="icon"
+              className="h-8 rounded-sm w-8"
+            />
+          </div>
 
           <h1 className="text-3xl font-bold text-white tracking-tight">
             Admin Login
@@ -72,7 +81,7 @@ export default function AdminLogin() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full bg-[#1a1a1a] border border-white/10 text-white rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#ff6b00] focus:border-transparent transition-all placeholder:text-gray-600"
+                className="w-full bg-[#1a1a1a] border border-gray-700 text-white rounded-xl px-4 py-3 focus:border-[#ff6b00] focus:ring-1 focus:ring-[#ff6b00] outline-none transition"
               />
             </div>
 
@@ -99,27 +108,10 @@ export default function AdminLogin() {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full bg-[#1a1a1a] border border-white/10 text-white rounded-xl px-4 py-3 focus:ring-2 focus:ring-[#ff6b00] focus:border-transparent transition-all placeholder:text-gray-600"
+                className="w-full bg-[#1a1a1a] border border-gray-700 text-white rounded-xl px-4 py-3 focus:border-[#ff6b00] focus:ring-1 focus:ring-[#ff6b00] outline-none transition"
               />
 
             </div>
-
-            {/* Remember */}
-            {/* <div className="flex items-center">
-
-              <input
-                type="checkbox"
-                name="remember"
-                checked={remember}
-                onChange={(e) => setRemember(e.target.checked)}
-                className="h-4 w-4 rounded border-gray-700 bg-gray-800 text-[#ff6b00] focus:ring-[#ff6b00]"
-              />
-
-              <label className="ml-2 text-sm text-gray-400">
-                Remember this device
-              </label>
-
-            </div> */}
 
             {/* Button */}
             <button
