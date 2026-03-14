@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 
 const Navbar = () => {
@@ -7,6 +7,9 @@ const Navbar = () => {
   const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  // useNavigate
+  const navigate = useNavigate();
 
   // scroll shadow
   useEffect(() => {
@@ -27,7 +30,7 @@ const Navbar = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // 🔥 CONTACT SCROLL FUNCTION
+  // CONTACT SCROLL FUNCTION
   const goToContact = () => {
     setOpen(false);
     setMobileServicesOpen(false);
@@ -103,12 +106,22 @@ const Navbar = () => {
             <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
           </li>
 
-          {/* ⭐ CONTACT (SCROLL NOT PAGE) */}
+          {/* CONTACT (SCROLL NOT PAGE) */}
           <li className="group relative">
             <button onClick={goToContact} className="text-white hover:text-orange-500 transition">
               Contact
             </button>
             <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+          </li>
+
+          {/* Admin Button */}
+          <li>
+            <button
+              onClick={() => navigate("/admin-login")}
+              className="w-9 h-9 flex items-center justify-center border-2 cursor-pointer border-white bg-orange-500 text-white font-bold rounded-full hover:bg-orange-600 transition"
+            >
+              A
+            </button>
           </li>
 
         </ul>
@@ -156,10 +169,23 @@ const Navbar = () => {
             </ul>
           </li>
 
-          {/* ⭐ MOBILE CONTACT SCROLL */}
+          {/* MOBILE CONTACT SCROLL */}
           <li>
             <button onClick={goToContact} className="text-white hover:text-orange-500">
               Contact
+            </button>
+          </li>
+
+          {/* Admin Button */}
+          <li>
+            <button
+              onClick={() => {
+                setOpen(false);
+                navigate("/admin-login");
+              }}
+              className="w-9 border-2 border-white h-9 flex items-center justify-center bg-orange-500 text-white font-bold rounded-full hover:bg-orange-600 transition"
+            >
+              A
             </button>
           </li>
 
