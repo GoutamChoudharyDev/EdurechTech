@@ -123,10 +123,35 @@ const getJobs = async (req, res) => {
     }
 }
 
+// Get single job by ID
+const getJobById = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const job = await Job.findById(id);
+
+        if (!job) {
+            return res.status(404).json({
+                message: "Job not found"
+            })
+        }
+
+        return res.status(200).json({
+            message: "Job fetched successfully",
+            job
+        })
+    } catch (error) {
+        console.log("getJobById error: ", error);
+        return res.status(500).json({
+            message: "Internal server error to fetch job"
+        })
+    }
+}
+
 // export controllers
 export {
     createJobs,
     updateJobs,
     deleteJobs,
     getJobs,
+    getJobById,
 }
