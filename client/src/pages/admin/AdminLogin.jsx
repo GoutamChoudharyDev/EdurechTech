@@ -45,7 +45,7 @@ export default function AdminLogin() {
         <header className="text-center mb-8">
 
           <div
-            className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#ff6b00] to-[#ff9500] mb-4 shadow-lg shadow-orange-500/20">
+            className="inline-flex items-center justify-center w-12 md:w-14 md:h-14 h-12 rounded-2xl bg-gradient-to-br from-[#ff6b00] to-[#ff9500] mb-4 shadow-lg shadow-orange-500/20">
             <img
               src="/logo-icon.png"
               alt="icon"

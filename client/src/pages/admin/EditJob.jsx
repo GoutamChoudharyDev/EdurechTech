@@ -9,6 +9,8 @@ const EditJob = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
+  const [open, setOpen] = useState(false);
+
   const [formData, setFormData] = useState({
     title: "",
     company: "",
@@ -21,12 +23,13 @@ const EditJob = () => {
   const [loading, setLoading] = useState(false);
   const [fetching, setFetching] = useState(true);
 
-  // Fetch existing job data on mount
+  // Fetch job data
   useEffect(() => {
     const fetchJob = async () => {
       try {
         const response = await api.get(`/api/jobs/${id}`);
         const job = response.data.job;
+
         setFormData({
           title: job.title || "",
           company: job.company || "",
@@ -48,12 +51,10 @@ const EditJob = () => {
     fetchJob();
   }, [id]);
 
-  // handle input changes
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // handle form submit
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -63,9 +64,7 @@ const EditJob = () => {
       toast.success("Job updated successfully!");
       navigate("/admin-dashboard");
     } catch (error) {
-      toast.error(
-        error.response?.data?.message || "Error updating job"
-      );
+      toast.error(error.response?.data?.message || "Error updating job");
       console.log("Update job error:", error);
     } finally {
       setLoading(false);
@@ -73,158 +72,188 @@ const EditJob = () => {
   };
 
   return (
-    <div className="flex h-screen bg-slate-50">
-      <Sidebar />
+    <div className="flex min-h-screen bg-slate-50 overflow-hidden">
+      
+      {/* Sidebar */}
+      <Sidebar open={open} />
+
+      {/* Mobile Overlay */}
+      {open && (
+        <div
+          className="fixed inset-0 bg-black/40 z-30 md:hidden"
+          onClick={() => setOpen(false)}
+        />
+      )}
 
       <main className="flex-1 flex flex-col overflow-hidden">
-        <Topbar />
 
-        <div className="p-8 overflow-y-auto">
+        {/* Topbar */}
+        <Topbar open={open} setOpen={setOpen} />
+
+        <div className="p-4 md:p-8 overflow-y-auto">
+
           {/* Header */}
-          <div className="flex items-center justify-between mb-8">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
             <div>
-              <h1 className="text-2xl font-bold">Edit Job</h1>
-              <p className="text-gray-500">
+              <h1 className="text-xl md:text-2xl font-bold">
+                Edit Job
+              </h1>
+              <p className="text-gray-500 text-sm md:text-base">
                 Update the job listing details below.
               </p>
             </div>
 
             <button
               onClick={() => navigate("/admin-dashboard")}
-              className="px-5 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-100 transition"
+              className="px-5 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-100 transition w-full md:w-auto"
             >
               ← Back
             </button>
           </div>
 
-          {/* Loading state */}
+          {/* Loading */}
           {fetching ? (
             <div className="flex items-center justify-center py-20">
-              <div className="text-gray-500 text-lg">Loading job details...</div>
+              <div className="text-gray-500 text-lg">
+                Loading job details...
+              </div>
             </div>
           ) : (
-            /* Form Card */
-            <form
-              onSubmit={handleSubmit}
-              className="max-w-3xl bg-white rounded-2xl shadow-md border border-gray-100 p-8 space-y-6"
-            >
-              {/* Title */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Job Title <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  name="title"
-                  value={formData.title}
-                  onChange={handleChange}
-                  required
-                  placeholder="e.g. Frontend Developer"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
-                />
-              </div>
+            <div className="mx-auto max-w-3xl">
+              <form
+                onSubmit={handleSubmit}
+                className="bg-white rounded-2xl shadow-md border border-gray-100 p-5 md:p-8 space-y-6"
+              >
 
-              {/* Company */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Company Name <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleChange}
-                  required
-                  placeholder="e.g. Google"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
-                />
-              </div>
-
-              {/* Location & Experience — side by side */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Job Title */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Location <span className="text-red-500">*</span>
+                    Job Title <span className="text-red-500">*</span>
                   </label>
+
                   <input
                     type="text"
-                    name="location"
-                    value={formData.location}
+                    name="title"
+                    value={formData.title}
                     onChange={handleChange}
                     required
-                    placeholder="e.g. Bangalore, India"
+                    placeholder="e.g. Frontend Developer"
                     className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
                   />
                 </div>
 
+                {/* Company */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Experience
+                    Company Name <span className="text-red-500">*</span>
                   </label>
-                  <select
-                    name="experience"
-                    value={formData.experience}
+
+                  <input
+                    type="text"
+                    name="company"
+                    value={formData.company}
                     onChange={handleChange}
-                    className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition bg-white"
-                  >
-                    <option value="">Select experience</option>
-                    <option value="Fresher">Fresher</option>
-                    <option value="1-2 years">1-2 years</option>
-                    <option value="3-5 years">3-5 years</option>
-                    <option value="5+ years">5+ years</option>
-                  </select>
+                    required
+                    placeholder="e.g. Google"
+                    className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                  />
                 </div>
-              </div>
 
-              {/* Salary */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Salary
-                </label>
-                <input
-                  type="text"
-                  name="salary"
-                  value={formData.salary}
-                  onChange={handleChange}
-                  placeholder="e.g. ₹6,00,000 - ₹10,00,000"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
-                />
-              </div>
+                {/* Location + Experience */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-              {/* Description */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Job Description
-                </label>
-                <textarea
-                  name="description"
-                  value={formData.description}
-                  onChange={handleChange}
-                  rows={5}
-                  placeholder="Describe the role, responsibilities, requirements…"
-                  className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition resize-none"
-                />
-              </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Location <span className="text-red-500">*</span>
+                    </label>
 
-              {/* Submit Buttons */}
-              <div className="flex items-center gap-4 pt-2">
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 active:scale-[0.98] transition-all disabled:opacity-60 disabled:cursor-not-allowed"
-                >
-                  {loading ? "Updating…" : "Update Job"}
-                </button>
+                    <input
+                      type="text"
+                      name="location"
+                      value={formData.location}
+                      onChange={handleChange}
+                      required
+                      placeholder="e.g. Bangalore, India"
+                      className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                    />
+                  </div>
 
-                <button
-                  type="button"
-                  onClick={() => navigate("/admin-dashboard")}
-                  className="px-6 py-3 border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-50 transition"
-                >
-                  Cancel
-                </button>
-              </div>
-            </form>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Experience
+                    </label>
+
+                    <select
+                      name="experience"
+                      value={formData.experience}
+                      onChange={handleChange}
+                      className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition bg-white"
+                    >
+                      <option value="">Select experience</option>
+                      <option value="Fresher">Fresher</option>
+                      <option value="1-2 years">1-2 years</option>
+                      <option value="3-5 years">3-5 years</option>
+                      <option value="5+ years">5+ years</option>
+                    </select>
+                  </div>
+
+                </div>
+
+                {/* Salary */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Salary
+                  </label>
+
+                  <input
+                    type="text"
+                    name="salary"
+                    value={formData.salary}
+                    onChange={handleChange}
+                    placeholder="e.g. ₹6,00,000 - ₹10,00,000"
+                    className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                  />
+                </div>
+
+                {/* Description */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Job Description
+                  </label>
+
+                  <textarea
+                    name="description"
+                    value={formData.description}
+                    onChange={handleChange}
+                    rows={5}
+                    placeholder="Describe the role, responsibilities, requirements…"
+                    className="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition resize-none"
+                  />
+                </div>
+
+                {/* Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4 pt-2">
+
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="w-full sm:w-auto px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 active:scale-[0.98] transition-all disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
+                    {loading ? "Updating…" : "Update Job"}
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => navigate("/admin-dashboard")}
+                    className="w-full sm:w-auto px-6 py-3 border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-50 transition"
+                  >
+                    Cancel
+                  </button>
+
+                </div>
+
+              </form>
+            </div>
           )}
         </div>
       </main>
