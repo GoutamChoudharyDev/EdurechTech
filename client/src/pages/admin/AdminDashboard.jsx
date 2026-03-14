@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import Sidebar from "../../components/AdminComponents/Sidebar";
 import Topbar from "../../components/AdminComponents/Topbar";
 import JobCard from "../../components/AdminComponents/JobCard"
 
 const AdminDashboard = () => {
+  const navigate = useNavigate();
 
   return (
     <div className="flex h-screen bg-slate-50">
@@ -20,7 +22,10 @@ const AdminDashboard = () => {
               </p>
             </div>
 
-            <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+            <button
+              onClick={() => navigate("/admin/create-job")}
+              className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+            >
               Create New Job
             </button>
           </div>

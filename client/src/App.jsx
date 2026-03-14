@@ -5,6 +5,7 @@ import CareerPage from "./pages/normal/CareerPage"
 import ServicePage from "./pages/normal/ServicePage"
 import AdminLogin from "./pages/admin/AdminLogin";
 import AdminDashboard from "./pages/admin/AdminDashboard"
+import CreateJob from "./pages/admin/CreateJob"
 import JobApplicationForm from "./pages/normal/JobApplicationForm"
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
       {/* Admin routes */}
       <Route path="/admin-login" element={<AdminLogin />} />
       <Route path="/admin-dashboard" element={<AdminDashboard />} />
+      <Route path="/admin/create-job" element={<CreateJob />} />
     </Routes >
   )
 }
