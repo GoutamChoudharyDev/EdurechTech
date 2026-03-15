@@ -98,7 +98,7 @@ const deleteJobs = async (req, res) => {
 }
 
 // Get jobs controller
-const getJobs = async (req, res) => {
+const getJobs = async (_, res) => {
     try {
         // Get jobs from DB
         const jobs = await Job.find();
