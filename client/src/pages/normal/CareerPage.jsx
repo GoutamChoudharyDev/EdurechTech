@@ -1,6 +1,6 @@
 import Header from "../../components/NormalComponents/CarrerPageComponents/Header";
 import Hero from "../../components/NormalComponents/CarrerPageComponents/Hero";
-import Footer from "../../components/NormalComponents/CarrerPageComponents/Footer";
+import Footer from "../../components/NormalComponents/HomePageComponents/Footer";
 
 const CareersPage = () => {
 
