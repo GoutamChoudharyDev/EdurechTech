@@ -5,7 +5,7 @@ const Sidebar = ({ open }) => {
     <aside
       className={`
       fixed md:static top-0 left-0 z-40
-      h-full w-64 bg-slate-900 text-slate-300 flex flex-col
+      h-screen w-64 bg-slate-900 text-slate-300 flex flex-col
       transform transition-transform duration-300
       ${open ? "translate-x-0" : "-translate-x-full"}
       md:translate-x-0
