@@ -8,6 +8,7 @@ import AdminDashboard from "./pages/admin/AdminDashboard"
 import CreateJob from "./pages/admin/CreateJob"
 import EditJob from "./pages/admin/EditJob"
 import JobApplicationForm from "./pages/normal/JobApplicationForm"
+import ContactInformation from "./pages/admin/ContactInformation"
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       <Route path="/admin-dashboard" element={<AdminDashboard />} />
       <Route path="/admin/create-job" element={<CreateJob />} />
       <Route path="/admin/edit-job/:id" element={<EditJob />} />
+      <Route path="/admin/contact" element={<ContactInformation />} />
     </Routes >
   )
 }

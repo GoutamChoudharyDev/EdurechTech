@@ -97,7 +97,7 @@ const JobCard = () => {
                 <button
                   onClick={() => deleteJob(job._id)}
                   className="flex-1 py-2 rounded-full text-white font-semibold
-                  bg-gradient-to-r cursor-pointer from-[#ff6b35] to-[#f7931e] transition"
+                  bg-gradient-to-r from-[#ff6b35] to-[#f7931e] cursor-pointer transition"
                 >
                   Delete
                 </button>

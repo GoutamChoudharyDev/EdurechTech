@@ -1,6 +1,6 @@
 import { Contact } from "../models/contact.model.js";
 
-// Controller function to handle contact form submission
+// contact form submission Controller
 const submitContactForm = async (req, res) => {
     try {
         // take data from frontend
@@ -43,4 +43,31 @@ const submitContactForm = async (req, res) => {
 
 }
 
-export { submitContactForm };   
+// Get Contact Info Controller
+const getContactInfo = async (_, res) => {
+    try {
+        // Get contact info from DB
+        const contacts = await Contact.find();
+        if (!contacts) {
+            return res.status(404).json({
+                message: "Contact not found"
+            })
+        }
+
+        // return response
+        return res.status(200).json({
+            message: "Contact info fetch successfully",
+            contacts
+        })
+    } catch (error) {
+        console.log("Internal server error during fetching contacts : ", error);
+        res.status(500).json({
+            message: "Internal server error during fetching contacts"
+        })
+    }
+}
+
+export {
+    submitContactForm,
+    getContactInfo
+};   
