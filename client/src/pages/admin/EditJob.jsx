@@ -92,22 +92,6 @@ const EditJob = () => {
 
         <div className="p-4 md:p-2 overflow-y-auto">
 
-          {/* Header */}
-          {/* <div className="flex flex-col md:flex-row md:items-center md:justify-between md:mb-2 mb-8">
-            <div>
-              <h1 className="text-xl md:text-2xl font-bold">
-                Edit Job
-              </h1>
-            </div>
-
-            <button
-              onClick={() => navigate("/admin-dashboard")}
-              className="px-5 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-100 transition w-full md:w-auto"
-            >
-              ← Back
-            </button>
-          </div> */}
-
           {/* Loading */}
           {fetching ? (
             <div className="flex items-center justify-center py-20">

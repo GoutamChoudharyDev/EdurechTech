@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const Sidebar = ({ open }) => {
   return (
@@ -21,18 +21,26 @@ const Sidebar = ({ open }) => {
       {/* Menu */}
       <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
 
-        <a className="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-600 text-white">
+        <Link
+          to="/admin-dashboard"
+          className="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-600 text-white"
+        >
           Job Listings
-        </a>
+        </Link>
 
-        <a className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800">
+        <Link
+          to="/admin/applications"
+          className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800"
+        >
           Job Applications
-        </a>
+        </Link>
 
-        <a className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800">
-          Settings
-        </a>
-
+        <Link
+          to="/admin/contact"
+          className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800"
+        >
+          Contact Information
+        </Link>
       </nav>
 
       {/* Profile */}
@@ -51,7 +59,6 @@ const Sidebar = ({ open }) => {
               Super Admin
             </p>
           </div>
-
         </div>
       </div>
 

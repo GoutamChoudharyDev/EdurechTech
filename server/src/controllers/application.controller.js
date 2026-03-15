@@ -57,7 +57,7 @@ const getApplication = async (_, res) => {
 
         // validation
         if (applications.length === 0) {
-            res.status(404).json({
+            return res.status(404).json({
                 message: "Application not found"
             })
         }
