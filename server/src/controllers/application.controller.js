@@ -49,5 +49,34 @@ const applyJobs = async (req, res) => {
     }
 }
 
+// fetch job application controller
+const getApplication = async (_, res) => {
+    try {
+        // Get applications from DB
+        const applications = await Application.find();
+
+        // validation
+        if (applications.length === 0) {
+            res.status(404).json({
+                message: "Application not found"
+            })
+        }
+
+        // return response
+        return res.status(200).json({
+            message: "Applications fetch successfully",
+            applications
+        })
+    } catch (error) {
+        console.log("Internal Server Error to fetch Applications: ", error);
+        return res.status(500).json({
+            message: "Internal Server Error to fetch Applications"
+        })
+    }
+}
+
 // export
-export { applyJobs }
+export {
+    applyJobs,
+    getApplication
+}
