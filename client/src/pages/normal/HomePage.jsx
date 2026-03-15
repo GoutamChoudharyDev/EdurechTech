@@ -5,6 +5,7 @@ import About from "../../components/NormalComponents/HomePageComponents/About"
 import Contact from "../../components/NormalComponents/HomePageComponents/Contact"
 import Footer from "../../components/NormalComponents/HomePageComponents/Footer"
 
+
 const HomePage = () => {
   return (
     <>
