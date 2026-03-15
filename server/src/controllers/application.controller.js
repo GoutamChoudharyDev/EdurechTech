@@ -53,7 +53,7 @@ const applyJobs = async (req, res) => {
 const getApplication = async (_, res) => {
     try {
         // Get applications from DB
-        const applications = await Application.find();
+        const applications = await Application.find().populate("job");
 
         // validation
         if (applications.length === 0) {

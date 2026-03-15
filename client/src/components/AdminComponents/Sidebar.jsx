@@ -30,14 +30,14 @@ const Sidebar = ({ open }) => {
 
         <Link
           to="/admin/applications"
-          className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800"
+          className="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-600 text-white"
         >
           Job Applications
         </Link>
 
         <Link
           to="/admin/contact"
-          className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-slate-800"
+          className="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-600 text-white"
         >
           Contact Information
         </Link>
