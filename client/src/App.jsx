@@ -9,6 +9,7 @@ import CreateJob from "./pages/admin/CreateJob"
 import EditJob from "./pages/admin/EditJob"
 import ApplicationsPage from "./pages/admin/ApplicationsPage"
 import JobApplicationForm from "./pages/normal/JobApplicationForm"
+import ContactPage from "./pages/normal/ContactPage"
 import ContactInformation from "./pages/admin/ContactInformation"
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
       <Route path="/career-page" element={<CareerPage />} />
       <Route path="/service-page" element={<ServicePage />} />
       <Route path="/job-application/:id" element={<JobApplicationForm />} />
+      <Route path="/contact-page" element={<ContactPage />} />
 
       {/* Admin routes */}
       <Route path="/admin-login" element={<AdminLogin />} />
