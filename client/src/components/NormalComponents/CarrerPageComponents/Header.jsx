@@ -4,14 +4,14 @@ const Header = () => {
     const [open, setOpen] = useState(false);
 
     const menuItems = [
-        { label: "Home", href: "#home" },
-        { label: "About", href: "#about" },
-        { label: "Services", href: "#service" },
-        { label: "Portfolio", href: "#portfolio" },
-        { label: "Team", href: "#team" },
-        { label: "Career", href: "/careers" },
-        { label: "Contact", href: "#contact" },
-        { label: "FAQ", href: "#faq" },
+        { label: "Home", href: "/" },
+        { label: "About", href: "/about-page" },
+        { label: "Services", href: "/service-page" },
+        // { label: "Portfolio", href: "#portfolio" },
+        // { label: "Team", href: "#team" },
+        { label: "Career", href: "/career-page" },
+        { label: "Contact", href: "/contact-page" },
+        // { label: "FAQ", href: "#faq" },
     ];
 
     return (
