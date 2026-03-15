@@ -31,15 +31,15 @@ const Navbar = () => {
   }, []);
 
   // CONTACT SCROLL FUNCTION
-  const goToContact = () => {
-    setOpen(false);
-    setMobileServicesOpen(false);
+  // const goToContact = () => {
+  //   setOpen(false);
+  //   setMobileServicesOpen(false);
 
-    const section = document.getElementById("contact");
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  //   const section = document.getElementById("contact");
+  //   if (section) {
+  //     section.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
 
   const services = [
     "IT Consulting", "Cloud Solutions", "AI & ML", "Software Development",
@@ -106,11 +106,11 @@ const Navbar = () => {
             <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
           </li>
 
-          {/* CONTACT (SCROLL NOT PAGE) */}
+          {/* Contact */}
           <li className="group relative">
-            <button onClick={goToContact} className="text-white hover:text-orange-500 transition">
+            <Link to="/contact-page" className="text-white hover:text-orange-500 transition">
               Contact
-            </button>
+            </Link>
             <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
           </li>
 
@@ -169,11 +169,11 @@ const Navbar = () => {
             </ul>
           </li>
 
-          {/* MOBILE CONTACT SCROLL */}
+          {/* Contact */}
           <li>
-            <button onClick={goToContact} className="text-white hover:text-orange-500">
+            <Link to="/contact-page" onClick={() => setOpen(false)} className="text-white hover:text-orange-500">
               Contact
-            </button>
+            </Link>
           </li>
 
           {/* Admin Button */}
