@@ -73,7 +73,7 @@ const EditJob = () => {
 
   return (
     <div className="flex min-h-screen bg-slate-50 overflow-hidden">
-      
+
       {/* Sidebar */}
       <Sidebar open={open} />
 
@@ -90,17 +90,14 @@ const EditJob = () => {
         {/* Topbar */}
         <Topbar open={open} setOpen={setOpen} />
 
-        <div className="p-4 md:p-8 overflow-y-auto">
+        <div className="p-4 md:p-2 overflow-y-auto">
 
           {/* Header */}
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+          {/* <div className="flex flex-col md:flex-row md:items-center md:justify-between md:mb-2 mb-8">
             <div>
               <h1 className="text-xl md:text-2xl font-bold">
                 Edit Job
               </h1>
-              <p className="text-gray-500 text-sm md:text-base">
-                Update the job listing details below.
-              </p>
             </div>
 
             <button
@@ -109,7 +106,7 @@ const EditJob = () => {
             >
               ← Back
             </button>
-          </div>
+          </div> */}
 
           {/* Loading */}
           {fetching ? (
@@ -122,7 +119,7 @@ const EditJob = () => {
             <div className="mx-auto max-w-3xl">
               <form
                 onSubmit={handleSubmit}
-                className="bg-white rounded-2xl shadow-md border border-gray-100 p-5 md:p-8 space-y-6"
+                className="bg-white rounded-2xl shadow-md border border-gray-100 p-5 md:p-8 space-y-4"
               >
 
                 {/* Job Title */}
@@ -232,12 +229,12 @@ const EditJob = () => {
                 </div>
 
                 {/* Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                <div className="flex flex-col sm:flex-row md:gap-118 gap-4">
 
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full sm:w-auto px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 active:scale-[0.98] transition-all disabled:opacity-60 disabled:cursor-not-allowed"
+                    className="w-full cursor-pointer sm:w-auto px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 active:scale-[0.98] transition-all disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     {loading ? "Updating…" : "Update Job"}
                   </button>
@@ -245,7 +242,7 @@ const EditJob = () => {
                   <button
                     type="button"
                     onClick={() => navigate("/admin-dashboard")}
-                    className="w-full sm:w-auto px-6 py-3 border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-50 transition"
+                    className="w-full cursor-pointer sm:w-auto px-6 py-3 border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-50 transition"
                   >
                     Cancel
                   </button>

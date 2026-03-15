@@ -145,7 +145,7 @@ const Contact = () => {
           className="w-full py-3 rounded-full font-semibold
           bg-gradient-to-r from-orange-500 to-orange-400
           hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(255,107,0,0.35)]
-          active:scale-95
+          active:scale-95 cursor-pointer
           transition-all duration-300"
         >
           Send Message
