@@ -2,11 +2,13 @@ import { useState } from "react";
 import api from "../../service/api";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { useAuth } from "../../context/AuthContext";
 
 export default function AdminLogin() {
   // useState
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { setAdmin } = useAuth();
 
   // useNavigate
   const navigate = useNavigate();
@@ -21,6 +23,7 @@ export default function AdminLogin() {
           password
         });
 
+      setAdmin(true);
       // navigate to admin dashboard
       navigate("/admin-dashboard")
 

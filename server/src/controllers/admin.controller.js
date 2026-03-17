@@ -49,7 +49,6 @@ const adminLogin = async (req, res) => {
         return res.status(200).json({
             success: true,
             message: "Admin login successful",
-            token
         });
 
     } catch (error) {
@@ -62,7 +61,27 @@ const adminLogin = async (req, res) => {
 
 };
 
-export { adminLogin };
+const adminLogout = async (req, res) => {
+    try {
+        res.clearCookie("token", {
+            httpOnly: true,
+            sameSite: "strict",
+            secure: false
+        });
 
+        return res.status(200).json({
+            success: true,
+            message: "Logout successful"
+        });
 
+    } catch (error) {
+        return res.status(500).json({
+            message: "Server error"
+        });
+    }
+};
 
+export {
+    adminLogin,
+    adminLogout
+};

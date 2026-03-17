@@ -40,6 +40,6 @@ app.use("/api", contactRoutes);
 app.use("/api", jobRoutes);
 app.use("/api", applicationRoute);
 
-app.use("/api/admin", adminRoutes)
+app.use("/api", adminRoutes)
 
 export default app;
