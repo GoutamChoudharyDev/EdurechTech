@@ -6,7 +6,7 @@ import ContactTable from "../../components/AdminComponents/ContactTable";
 const ContactInformation = () => {
     // useState
     const [open, setOpen] = useState(false);
-    const [fetching, setFetching] = useState(true);
+    const [loading, setLoading] = useState(true);
 
     return (
         <div className="flex min-h-screen bg-slate-50 overflow-hidden">
@@ -27,20 +27,14 @@ const ContactInformation = () => {
                 {/* Topbar */}
                 <Topbar open={open} setOpen={setOpen} />
 
-                <div className="p-4 md:p-2 overflow-y-auto">
-
-                    {/* Loading */}
-                    {/* {fetching ? (
-                        <div className="flex items-center justify-center py-20">
-                            <div className="text-gray-500 text-lg">
-                                Loading Contact details...
-                            </div>
-                        </div>
-                    ) : (
-                        <div className="mx-auto max-w-3xl">
-                            
-                        </div>
-                    )} */}
+                <div className="p-8 overflow-y-auto">
+                    {/* Header */}
+                    <div className="mb-8">
+                        <h1 className="text-2xl font-bold">Contact Informations</h1>
+                        <p className="text-gray-500">
+                            View all contact details of applicants.
+                        </p>
+                    </div>
 
                     <ContactTable />
                 </div>

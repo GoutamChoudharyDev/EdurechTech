@@ -11,6 +11,7 @@ import ApplicationsPage from "./pages/admin/ApplicationsPage"
 import JobApplicationForm from "./pages/normal/JobApplicationForm"
 import ContactPage from "./pages/normal/ContactPage"
 import ContactInformation from "./pages/admin/ContactInformation"
+import ProtectedAdmin from "./components/AuthComponent/ProtectedAdmin"
 
 const App = () => {
   return (
@@ -21,14 +22,16 @@ const App = () => {
       <Route path="/service-page" element={<ServicePage />} />
       <Route path="/job-application/:id" element={<JobApplicationForm />} />
       <Route path="/contact-page" element={<ContactPage />} />
+      <Route path="/admin-login" element={<AdminLogin />} />
 
       {/* Admin routes */}
-      <Route path="/admin-login" element={<AdminLogin />} />
-      <Route path="/admin-dashboard" element={<AdminDashboard />} />
-      <Route path="/admin/create-job" element={<CreateJob />} />
-      <Route path="/admin/edit-job/:id" element={<EditJob />} />
-      <Route path="/admin/applications" element={<ApplicationsPage />} />
-      <Route path="/admin/contact" element={<ContactInformation />} />
+      <Route element={<ProtectedAdmin />}>
+        <Route path="/admin-dashboard" element={<AdminDashboard />} />
+        <Route path="/admin/create-job" element={<CreateJob />} />
+        <Route path="/admin/edit-job/:id" element={<EditJob />} />
+        <Route path="/admin/applications" element={<ApplicationsPage />} />
+        <Route path="/admin/contact" element={<ContactInformation />} />
+      </Route>
     </Routes >
   )
 }

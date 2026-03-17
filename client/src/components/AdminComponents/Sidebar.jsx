@@ -1,6 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import api from "../../service/api";
 
 const Sidebar = ({ open }) => {
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    try {
+      await api.get("/api/admin/logout");
+      navigate("/admin-login");
+    } catch (error) {
+      console.log("Logout Error:", error);
+    }
+  };
+
   return (
     <aside
       className={`
@@ -20,48 +32,47 @@ const Sidebar = ({ open }) => {
 
       {/* Menu */}
       <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
-
         <Link
           to="/admin-dashboard"
-          className="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-600 text-white"
+          className="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-500 hover:bg-blue-800 text-white"
         >
           Job Listings
         </Link>
 
         <Link
           to="/admin/applications"
-          className="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-600 text-white"
+          className="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-500 hover:bg-blue-800 text-white"
         >
           Job Applications
         </Link>
 
         <Link
           to="/admin/contact"
-          className="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-600 text-white"
+          className="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-500 hover:bg-blue-800 text-white"
         >
           Contact Information
         </Link>
       </nav>
 
-      {/* Profile */}
+      {/* Logout */}
       <div className="p-6 border-t border-slate-800">
-        <div className="flex items-center gap-3">
+        <button
+          onClick={handleLogout}
+          className="w-full flex items-center justify-center gap-2 
+    bg-gradient-to-r from-[#ff6b35] to-[#f7931e]
+    text-white font-semibold 
+    py-3 rounded-xl cursor-pointer
+    transition-all duration-200 
+    hover:shadow-lg hover:shadow-red-500/20 
+    active:scale-95"
+        >
+          Logout
+        </button>
 
-          <div className="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-white font-semibold">
-            AD
-          </div>
-
-          <div>
-            <p className="text-sm font-medium text-white">
-              Admin User
-            </p>
-            <p className="text-xs text-slate-500">
-              Super Admin
-            </p>
-          </div>
-        </div>
+        <p className="text-xs text-slate-500 text-center mt-2">
+          End your admin session securely
+        </p>
       </div>
-
     </aside>
   );
 };
