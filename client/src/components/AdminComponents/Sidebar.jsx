@@ -1,8 +1,9 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import api from "../../service/api";
 
 const Sidebar = ({ open }) => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleLogout = async () => {
     try {
@@ -11,6 +12,13 @@ const Sidebar = ({ open }) => {
     } catch (error) {
       console.log("Logout Error:", error);
     }
+  };
+
+  const getLinkClass = (path) => {
+    return `flex items-center gap-3 px-4 py-3 rounded-lg transition-all ${location.pathname === path
+      ? "bg-blue-600 text-white shadow-md"
+      : "text-slate-300 hover:bg-slate-800"
+      }`;
   };
 
   return (
@@ -34,21 +42,21 @@ const Sidebar = ({ open }) => {
       <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
         <Link
           to="/admin-dashboard"
-          className="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-500 hover:bg-blue-800 text-white"
+          className={getLinkClass("/admin-dashboard")}
         >
           Job Listings
         </Link>
 
         <Link
           to="/admin/applications"
-          className="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-500 hover:bg-blue-800 text-white"
+          className={getLinkClass("/admin/applications")}
         >
           Job Applications
         </Link>
 
         <Link
           to="/admin/contact"
-          className="flex items-center gap-3 px-4 py-3 rounded-lg bg-blue-500 hover:bg-blue-800 text-white"
+          className={getLinkClass("/admin/contact")}
         >
           Contact Information
         </Link>
