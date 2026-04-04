@@ -7,19 +7,16 @@ const CoreEssentials = () => {
             icon: Smartphone,
             title: "Mobile Friendly",
             desc: "Your site will look perfect and work smoothly on phones, tablets, and computers. We make sure your customers can reach you from anywhere.",
-            slug: "mobile-friendly",
         },
         {
             icon: Zap,
             title: "Super Fast",
             desc: "No one likes waiting. We build sites that load instantly, keeping your visitors engaged and helping you rank higher on Google.",
-            slug: "super-fast",
         },
         {
             icon: Shield,
             title: "Safe & Secure",
             desc: "Security is not an option. We implement top-tier safety measures to protect your business data and your customers’ private information.",
-            slug: "safe-secure",
         },
     ];
 

@@ -1,15 +1,6 @@
-import { Code, Database, Cloud, Layers } from "lucide-react";
+import React from 'react'
 
-const Toolbox = () => {
-  const tools = [
-    { title: "HTML", subtitle: "HTML5", icon: Code },
-    { title: "CSS", subtitle: "CSS3", icon: Code },
-    { title: "JS", subtitle: "JavaScript", icon: Code },
-    { title: "SQL & Data", subtitle: "SQL & Data", icon: Database },
-    { title: "Cloud Services", subtitle: "Cloud Services", icon: Cloud },
-    { title: "Modern Frameworks", subtitle: "Frameworks", icon: Layers },
-  ];
-
+const Toolbox = ({ title, subtitle, tools }) => {
   return (
     <section className="bg-[#020617] px-6 md:px-16 py-20">
       <div className="max-w-[1250px] mx-auto w-full">
@@ -17,10 +8,10 @@ const Toolbox = () => {
         {/* Heading */}
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-200 mb-3">
-            Our Technology Toolbox
+            {title}
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            We use industry-leading tools to ensure your website is modern, scalable, and powerful.
+            {subtitle}
           </p>
         </div>
 
@@ -49,9 +40,7 @@ const Toolbox = () => {
               </div>
             );
           })}
-
         </div>
-
       </div>
     </section>
   );

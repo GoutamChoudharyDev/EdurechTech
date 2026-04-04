@@ -1,0 +1,51 @@
+import { ArrowRight } from "lucide-react";
+
+const SoftwareDevHero = () => {
+    return (
+        <section className="min-h-screen flex items-center bg-gradient-to-br from-[#020617] via-[#020617] to-[#0f172a] px-6 pb-6 md:px-16">
+            <div className="max-w-[1250px] mx-auto w-full grid md:grid-cols-2 gap-6  items-center">
+                {/* LEFT CONTENT */}
+                <div>
+                    <span className="text-xs bg-[#111827] px-3 py-1 rounded-full border border-gray-700">
+                        SOFTWARE DEVELOPMENT
+                    </span>
+
+                    <h1 className="text-4xl md:text-5xl font-bold leading-tight mt-4">
+                        Bespoke <br />
+                        <span className="text-orange-500">Software</span> <br />
+                        Solutions.
+                    </h1>
+
+                    <p className="text-gray-400 mt-4 text-sm md:text-base max-w-md">
+                        We build powerful, custom-engineered software that solves your
+                        business challenges and scales with your ambition. No shortcuts,
+                        just excellence.
+                    </p>
+
+                    {/* BUTTONS */}
+                    <div className="flex gap-4 mt-6">
+                        <button className="bg-orange-500 hover:bg-orange-600 transition px-5 py-2 rounded-lg flex items-center gap-2">
+                            Start Your Project <ArrowRight size={16} />
+                        </button>
+
+                        <button className="bg-[#1f2937] hover:bg-[#374151] transition px-5 py-2 rounded-lg">
+                            View Portfolio
+                        </button>
+                    </div>
+                </div>
+
+                {/* RIGHT IMAGE */}
+                <div className="bg-gradient-to-r from-[#1f2937] to-[#111827] rounded-xl p-6">
+                    <img
+                        src="/software.png" // replace with your image
+                        alt="Software Engineering"
+                        className="rounded-lg w-full object-cover"
+                    />
+                </div>
+
+            </div>
+        </section>
+    )
+}
+
+export default SoftwareDevHero
