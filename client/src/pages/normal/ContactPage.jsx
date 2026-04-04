@@ -1,6 +1,6 @@
-import Navbar from "../../components/NormalComponents/HomePageComponents/Navbar"
-import Contact from "../../components/NormalComponents/HomePageComponents/Contact"
-import Footer from "../../components/NormalComponents/HomePageComponents/Footer"
+import Navbar from "../../components/NormalComponents/home-page-components/Navbar"
+import Contact from "../../components/NormalComponents/home-page-components/Contact"
+import Footer from "../../components/NormalComponents/home-page-components/Footer"
 
 const ContactPage = () => {
   return (

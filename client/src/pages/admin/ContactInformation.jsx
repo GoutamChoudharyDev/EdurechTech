@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Sidebar from "../../components/AdminComponents/Sidebar";
-import Topbar from "../../components/AdminComponents/Topbar";
-import ContactTable from "../../components/AdminComponents/ContactTable";
+import Sidebar from "../../components/admin-components/Sidebar";
+import Topbar from "../../components/admin-components/Topbar";
+import ContactTable from "../../components/admin-components/ContactTable";
 
 const ContactInformation = () => {
     // useState

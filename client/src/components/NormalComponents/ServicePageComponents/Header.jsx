@@ -60,19 +60,16 @@ const Header = () => {
           className="md:hidden flex flex-col justify-between w-7 h-5"
         >
           <span
-            className={`h-[3px] rounded bg-white transition-all ${
-              open ? "rotate-45 translate-y-2" : ""
-            }`}
+            className={`h-[3px] rounded bg-white transition-all ${open ? "rotate-45 translate-y-2" : ""
+              }`}
           ></span>
           <span
-            className={`h-[3px] rounded bg-white transition-all ${
-              open ? "opacity-0" : ""
-            }`}
+            className={`h-[3px] rounded bg-white transition-all ${open ? "opacity-0" : ""
+              }`}
           ></span>
           <span
-            className={`h-[3px] rounded bg-white transition-all ${
-              open ? "-rotate-45 -translate-y-2" : ""
-            }`}
+            className={`h-[3px] rounded bg-white transition-all ${open ? "-rotate-45 -translate-y-2" : ""
+              }`}
           ></span>
         </button>
       </div>

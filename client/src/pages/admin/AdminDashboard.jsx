@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Sidebar from "../../components/AdminComponents/Sidebar";
-import Topbar from "../../components/AdminComponents/Topbar";
-import JobCard from "../../components/AdminComponents/JobCard";
+import Sidebar from "../../components/admin-components/Sidebar";
+import Topbar from "../../components/admin-components/Topbar";
+import JobCard from "../../components/admin-components/JobCard";
 
 const AdminDashboard = () => {
   const navigate = useNavigate();
