@@ -1,23 +1,18 @@
-import Header from "../../components/NormalComponents/ServicePageComponents/Header"
 import Hero from "../../components/NormalComponents/ServicePageComponents/Hero"
-import Stats from "../../components/NormalComponents/ServicePageComponents/Stats"
-import Footer from "../../components/NormalComponents/HomePageComponents/Footer"
 import CTA from "../../components/NormalComponents/ServicePageComponents/CTA"
 import Services from "../../components/NormalComponents/ServicePageComponents/Services"
+// import Stats from "../../components/NormalComponents/ServicePageComponents/Stats"
 
 const ServicePage = () => {
   return (
-    <div >
-      <Header />
-      <main className="pt-24 md:pt-12">
+    <>
+      <main className="bg-[#020c1b] text-white min-h-screen">
         <Hero />
-        <Stats />
-        <CTA />
         <Services />
+        <CTA />
+        {/* <Stats /> */}
       </main>
-
-      <Footer />
-    </div>
+    </>
   )
 }
 

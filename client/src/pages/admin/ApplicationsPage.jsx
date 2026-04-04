@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import api from "../../service/api";
-import Sidebar from "../../components/AdminComponents/Sidebar";
-import Topbar from "../../components/AdminComponents/Topbar";
+import Sidebar from "../../components/admin-components/Sidebar";
+import Topbar from "../../components/admin-components/Topbar";
 
 const ApplicationsPage = () => {
   const [applications, setApplications] = useState([]);

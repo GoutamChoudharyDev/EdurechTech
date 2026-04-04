@@ -11,18 +11,25 @@ import ApplicationsPage from "./pages/admin/ApplicationsPage"
 import JobApplicationForm from "./pages/normal/JobApplicationForm"
 import ContactPage from "./pages/normal/ContactPage"
 import ContactInformation from "./pages/admin/ContactInformation"
-import ProtectedAdmin from "./components/AuthComponent/ProtectedAdmin"
+import ProtectedAdmin from "./components/auth-component/ProtectedAdmin"
+import SubServices from "./pages/normal/SubServices"
+import ServiceLayout from "./components/NormalComponents/ServicePageComponents/service-page-layout/ServiceLayout"
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/about-page" element={<AboutPage />} />
       <Route path="/career-page" element={<CareerPage />} />
-      <Route path="/service-page" element={<ServicePage />} />
       <Route path="/job-application/:id" element={<JobApplicationForm />} />
       <Route path="/contact-page" element={<ContactPage />} />
       <Route path="/admin-login" element={<AdminLogin />} />
+
+      {/* service layout for render header and footer for every service page */}
+      <Route element={<ServiceLayout />}>
+        <Route path="/service-page" element={<ServicePage />} />
+        <Route path="/services-page/:serviceType" element={<SubServices />} />
+        <Route path="/about-page" element={<AboutPage />} />
+      </Route>
 
       {/* Admin routes */}
       <Route element={<ProtectedAdmin />}>

@@ -1,16 +1,15 @@
 import Header from '../../components/NormalComponents/ServicePageComponents/Header'
-import Footer from '../../components/NormalComponents/HomePageComponents/Footer'
-import Hero from '../../components/NormalComponents/AboutPageComponents/Hero'
-import About from '../../components/NormalComponents/AboutPageComponents/About'
-import MissionVision from '../../components/NormalComponents/AboutPageComponents/MissionVision'
-import Values from '../../components/NormalComponents/AboutPageComponents/Values'
-import Team from '../../components/NormalComponents/AboutPageComponents/Team'
-import Testimonials from '../../components/NormalComponents/AboutPageComponents/Testimonials'
+import Footer from '../../components/NormalComponents/home-page-components/Footer'
+import Hero from '../../components/NormalComponents/about-page-components/Hero'
+import About from '../../components/NormalComponents/about-page-components/About'
+import MissionVision from '../../components/NormalComponents/about-page-components/MissionVision'
+import Values from '../../components/NormalComponents/about-page-components/Values'
+import Team from '../../components/NormalComponents/about-page-components/Team'
+import Testimonials from '../../components/NormalComponents/about-page-components/Testimonials'
 
 const AboutPage = () => {
   return (
     <>
-      <Header />
       <main className="pt-24 md:pt-12">
         <Hero />
         <About />
@@ -19,8 +18,6 @@ const AboutPage = () => {
         <Team />
         <Testimonials />
       </main>
-      
-      <Footer />
     </>
   )
 }
