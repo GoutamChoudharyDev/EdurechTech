@@ -2,12 +2,12 @@ import React from 'react'
 
 const Toolbox = ({ title, subtitle, tools }) => {
   return (
-    <section className="bg-[#020617] px-6 md:px-16 py-20">
+    <section className="bg-[#020617] px-6 md:px-16 py-12 md:py-20">
       <div className="max-w-[1250px] mx-auto w-full">
 
         {/* Heading */}
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-200 mb-3">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-200 mb-3">
             {title}
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
@@ -16,7 +16,7 @@ const Toolbox = ({ title, subtitle, tools }) => {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
 
           {tools.map((tool, index) => {
             const Icon = tool.icon;

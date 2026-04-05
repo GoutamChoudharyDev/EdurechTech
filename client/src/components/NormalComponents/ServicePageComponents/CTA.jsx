@@ -61,7 +61,7 @@ const CTA = () => {
   return (
     <section className="px-6 max-w-[1250px] mx-auto md:pt-20 md:pb-20 pt-6 pb-6 md:px-16">
 
-      <div className="bg-[#0a0a0a] border border-orange-500 rounded-3xl p-10 text-center">
+      <div className="bg-[#0a0a0a] border border-orange-500 rounded-3xl p-6 sm:p-10 text-center">
 
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
           Build Your Future with{" "}

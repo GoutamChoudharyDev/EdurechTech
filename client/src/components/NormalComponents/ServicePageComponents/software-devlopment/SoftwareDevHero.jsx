@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 const SoftwareDevHero = () => {
     return (
-        <section className="min-h-screen flex items-center bg-gradient-to-br from-[#020617] via-[#020617] to-[#0f172a] px-6 pb-6 md:px-16">
+        <section className="min-h-screen flex items-center bg-gradient-to-br from-[#020617] via-[#020617] to-[#0f172a] px-6 pt-24 pb-6 md:pt-6 md:px-16">
             <div className="max-w-[1250px] mx-auto w-full grid md:grid-cols-2 gap-6  items-center">
                 {/* LEFT CONTENT */}
                 <div>
@@ -10,7 +10,7 @@ const SoftwareDevHero = () => {
                         SOFTWARE DEVELOPMENT
                     </span>
 
-                    <h1 className="text-4xl md:text-5xl font-bold leading-tight mt-4">
+                    <h1 className="text-4xl sm:text-5xl md:text-5xl font-bold leading-tight mt-4">
                         Bespoke <br />
                         <span className="text-orange-500">Software</span> <br />
                         Solutions.
@@ -23,7 +23,7 @@ const SoftwareDevHero = () => {
                     </p>
 
                     {/* BUTTONS */}
-                    <div className="flex gap-4 mt-6">
+                    <div className="flex flex-wrap gap-4 mt-6">
                         <button className="bg-orange-500 hover:bg-orange-600 transition px-5 py-2 rounded-lg flex items-center gap-2">
                             Start Your Project <ArrowRight size={16} />
                         </button>
