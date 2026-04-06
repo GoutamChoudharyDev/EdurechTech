@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { adminAuth } from "../middleware/adminAuth.middleware.js";
-import { createProject, deleteProject, getProject, updateProject } from "../controllers/project.controller.js";
+import { createProject, deleteProject, getProject, getProjectById, updateProject } from "../controllers/project.controller.js";
 
 const router = Router();
 
@@ -11,5 +11,6 @@ router.delete("/admin/deleteProject/:id", adminAuth, deleteProject)
 
 // user route
 router.get("/getProject", getProject);
+router.get("/getProject/:id", getProjectById);
 
 export default router;

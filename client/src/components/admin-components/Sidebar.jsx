@@ -60,6 +60,13 @@ const Sidebar = ({ open }) => {
         >
           Contact Information
         </Link>
+
+        <Link
+          to="/admin/projects"
+          className={getLinkClass("/admin/projects")}
+        >
+          Projects
+        </Link>
       </nav>
 
       {/* Logout */}

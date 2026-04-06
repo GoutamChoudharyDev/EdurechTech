@@ -106,6 +106,11 @@ const Navbar = () => {
             <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
           </li>
 
+          <li className="group relative">
+            <Link to="/portfolio" className="text-white hover:text-orange-500 transition">Portfolio</Link>
+            <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-orange-500 transition-all duration-300 group-hover:w-full"></span>
+          </li>
+
           {/* Contact */}
           <li className="group relative">
             <Link to="/contact-page" className="text-white hover:text-orange-500 transition">
@@ -141,6 +146,8 @@ const Navbar = () => {
           <li><Link to="/" onClick={() => setOpen(false)} className="text-white hover:text-orange-500">Home</Link></li>
 
           <li><Link to="/about-page" onClick={() => setOpen(false)} className="text-white hover:text-orange-500">About</Link></li>
+
+          <li><Link to="/portfolio" onClick={() => setOpen(false)} className="text-white hover:text-orange-500">Portfolio</Link></li>
 
           {/* Services */}
           <li
