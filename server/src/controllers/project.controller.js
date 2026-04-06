@@ -131,10 +131,35 @@ const getProject = async (_, res) => {
     }
 }
 
+// Get single project by ID
+const getProjectById = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const project = await Project.findById(id);
+
+        if (!project) {
+            return res.status(404).json({
+                message: "Project not found"
+            })
+        }
+
+        return res.status(200).json({
+            message: "Project fetched successfully",
+            project
+        })
+    } catch (error) {
+        console.log("getProjectById error: ", error);
+        return res.status(500).json({
+            message: "Internal server error to fetch project"
+        })
+    }
+}
+
 // exports
 export {
     createProject,
     getProject,
+    getProjectById,
     updateProject,
     deleteProject,
 }
