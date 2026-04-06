@@ -11,6 +11,7 @@ import adminRoutes from "./routes/admin.route.js"
 import contactRoutes from "./routes/contact.route.js";
 import jobRoutes from "./routes/job.route.js";
 import applicationRoute from "./routes/application.route.js";
+import projectRoute from "./routes/project.route.js";
 
 // Initialize Express app
 const app = express();
@@ -39,6 +40,7 @@ app.get("/", (req, res) => {
 app.use("/api", contactRoutes);
 app.use("/api", jobRoutes);
 app.use("/api", applicationRoute);
+app.use("/api", projectRoute);
 
 app.use("/api", adminRoutes)
 

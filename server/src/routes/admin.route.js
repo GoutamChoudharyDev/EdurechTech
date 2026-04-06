@@ -5,6 +5,7 @@ import { adminAuth } from "../middleware/adminAuth.middleware.js";
 
 const router = express.Router();
 
+// Authentication routes
 router.post("/admin/login", adminLogin);
 router.get("/admin/logout", adminLogout);
 

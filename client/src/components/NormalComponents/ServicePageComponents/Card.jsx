@@ -16,7 +16,10 @@ const Card = ({ icon: Icon, title, desc, slug, showBtn = true }) => {
 
       {showBtn && (
         <button
-          onClick={() => navigate(`/services-page/${slug}`)}
+          onClick={() => {
+            navigate(`/services-page/${slug}`);
+            window.scrollTo(0, 0);
+          }}
           className="flex items-center gap-2 text-orange-400 cursor-pointer text-sm group-hover:translate-x-1 transition"
         >
           Learn More <ArrowRight size={16} />

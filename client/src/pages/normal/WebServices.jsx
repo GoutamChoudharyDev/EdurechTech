@@ -6,11 +6,11 @@ import WebDevTechTools from "../../components/NormalComponents/ServicePageCompon
 
 const WebServices = () => {
     return (
-        <main className="bg-[#020c1b] text-white pt-14 md:pt-5 min-h-screen">
+        <main className="bg-[#020c1b] pt-15 md:pt-10 text-white min-h-screen">
             <WebDevHero />
             <CoreEssentials />
             <WhyUs />
-            <WebDevTechTools/>
+            <WebDevTechTools />
             <CTA />
         </main>
     )
