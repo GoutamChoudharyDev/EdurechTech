@@ -21,11 +21,11 @@ const Features = () => {
     ];
 
     return (
-        <section className="bg-[#0b1220] text-white py-16 px-6 md:px-12">
+        <section className="bg-[#0b1220] text-white py-12 md:py-16 px-6 md:px-12">
             <div className="max-w-7xl mx-auto">
 
                 {/* Heading */}
-                <h2 className="text-2xl md:text-3xl font-semibold mt-3 mb-10">
+                <h2 className="text-2xl sm:text-3xl md:text-3xl font-semibold mt-3 mb-10">
                     Engineered for Excellence
                 </h2>
 

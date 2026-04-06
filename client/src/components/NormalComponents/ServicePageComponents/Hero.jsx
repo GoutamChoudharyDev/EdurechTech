@@ -98,7 +98,7 @@ const Hero = () => {
                     </p>
 
                     {/* CTA */}
-                    <div className="mt-8 flex gap-4">
+                    <div className="mt-8 flex flex-wrap gap-4">
                         <button className="px-6 py-3 bg-orange-400 cursor-pointer text-black font-semibold rounded-xl hover:bg-orange-300 transition">
                             Get Started
                         </button>

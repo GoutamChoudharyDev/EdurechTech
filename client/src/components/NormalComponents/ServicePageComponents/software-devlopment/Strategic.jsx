@@ -23,12 +23,12 @@ const Strategic = () => {
   ];
 
   return (
-    <section className="bg-[#0b1220] text-white py-16 px-6 md:px-12">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+    <section className="bg-[#0b1220] text-white py-12 md:py-16 px-6 md:px-12">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 md:gap-10 items-start">
 
         {/* LEFT CONTENT */}
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold leading-snug">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug">
             Strategic Yields for the <br />
             <span className="text-orange-500">Modern Enterprise</span>
           </h2>
