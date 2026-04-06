@@ -9,9 +9,9 @@ const SoftwareServices = () => {
     <main className="bg-[#020c1b] text-white pt-14 md:pt-5 min-h-screen">
       <SoftwareDevHero />
       <Features />
-      <Strategic/>
-      <SoftwareDevTechTools/>
-      <CTA/>
+      <Strategic />
+      <SoftwareDevTechTools />
+      <CTA />
     </main>
   )
 }
