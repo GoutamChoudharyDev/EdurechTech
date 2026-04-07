@@ -27,7 +27,7 @@ const ProfileYields = () => {
                 <div className="relative">
                     <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
                         <img
-                            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80"
+                            src="/earthImage.jpg"
                             alt="Global Digital Network"
                             className="w-full h-full object-cover"
                         />

@@ -27,7 +27,7 @@ const StrategicYields = () => {
                 <div className="relative">
                     <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
                         <img
-                            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80"
+                            src="/laptopImage.jpg"
                             alt="Marketing Analytics Dashboard"
                             className="w-full h-full object-cover"
                         />

@@ -63,7 +63,7 @@ const WhyUs = () => {
           <div className="relative">
             <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1556761175-4b46a572b786"
+                src="/officeImg.jpg"
                 alt="Team discussion"
                 className="w-full h-full object-cover"
               />
