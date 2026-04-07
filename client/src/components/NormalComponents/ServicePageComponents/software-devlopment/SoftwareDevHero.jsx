@@ -1,6 +1,9 @@
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const SoftwareDevHero = () => {
+    const navigate = useNavigate();
+
     return (
         <section className="min-h-screen flex items-center bg-gradient-to-br from-[#020617] via-[#020617] to-[#0f172a] px-6 pt-24 pb-6 md:pt-6 md:px-16">
             <div className="max-w-[1250px] mx-auto w-full grid md:grid-cols-2 gap-6  items-center">
@@ -24,11 +27,19 @@ const SoftwareDevHero = () => {
 
                     {/* BUTTONS */}
                     <div className="flex flex-wrap gap-4 mt-6">
-                        <button className="bg-orange-500 hover:bg-orange-600 transition px-5 py-2 rounded-lg flex items-center gap-2">
+                        <button
+                            onClick={() => {
+                                navigate("/contact-page")
+                            }}
+                            className="bg-orange-500 cursor-pointer hover:bg-orange-600 transition px-5 py-2 rounded-lg flex items-center gap-2">
                             Start Your Project <ArrowRight size={16} />
                         </button>
 
-                        <button className="bg-[#1f2937] hover:bg-[#374151] transition px-5 py-2 rounded-lg">
+                        <button
+                            onClick={() => {
+                                navigate("/portfolio")
+                            }}
+                            className="bg-[#1f2937] cursor-pointer hover:bg-[#374151] transition px-5 py-2 rounded-lg">
                             View Portfolio
                         </button>
                     </div>
@@ -37,7 +48,7 @@ const SoftwareDevHero = () => {
                 {/* RIGHT IMAGE */}
                 <div className="bg-gradient-to-r from-[#1f2937] to-[#111827] rounded-xl p-6">
                     <img
-                        src="/software.png" // replace with your image
+                        src="/softwareImage.jpg"
                         alt="Software Engineering"
                         className="rounded-lg w-full object-cover"
                     />

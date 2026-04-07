@@ -1,6 +1,9 @@
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const DigitalHero = () => {
+    const navigate = useNavigate();
+
     return (
         <section className="min-h-screen flex items-center bg-gradient-to-br from-[#020617] via-[#020617] to-[#0f172a] px-6 pt-24 pb-6 md:pt-6 md:px-16 relative overflow-hidden">
 
@@ -43,11 +46,15 @@ const DigitalHero = () => {
 
                     {/* Buttons */}
                     <div className="mt-6 flex flex-wrap gap-6">
-                        <button className="bg-orange-400 text-black px-6 py-3 rounded-xl font-medium hover:bg-orange-300 transition flex items-center gap-2">
+                        <button
+                            onClick={() => navigate("/contact-page")}
+                            className="bg-orange-400 cursor-pointer text-black px-6 py-3 rounded-xl font-medium hover:bg-orange-300 transition flex items-center gap-2">
                             Analyze My Strategy <ArrowRight size={18} />
                         </button>
 
-                        <button className="border border-white/10 px-6 py-3 rounded-xl text-gray-300 hover:border-orange-400 hover:text-white transition">
+                        <button
+                            onClick={() => navigate("/contact-page")}
+                            className="border cursor-pointer border-white/10 px-6 py-3 rounded-xl text-gray-300 hover:border-orange-400 hover:text-white transition">
                             View Process
                         </button>
                     </div>

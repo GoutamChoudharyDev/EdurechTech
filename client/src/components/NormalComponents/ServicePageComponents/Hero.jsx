@@ -57,8 +57,11 @@
 //     //     );
 
 import { Brain, Cloud, Code } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+    const navigate = useNavigate();
+
     return (
         <section className="relative pt-22 md:pt-10 min-h-screen flex items-center bg-gradient-to-br from-[#0f172a] via-[#020617] to-[#020617] overflow-hidden">
 
@@ -99,10 +102,20 @@ const Hero = () => {
 
                     {/* CTA */}
                     <div className="mt-8 flex flex-wrap gap-4">
-                        <button className="px-6 py-3 bg-orange-400 cursor-pointer text-black font-semibold rounded-xl hover:bg-orange-300 transition">
+                        <button
+                            onClick={() => {
+                                navigate("/contact-page")
+                                window.scrollTo(0, 0);
+                            }}
+                            className="px-6 py-3 bg-orange-400 cursor-pointer text-black font-semibold rounded-xl hover:bg-orange-300 transition">
                             Get Started
                         </button>
-                        <button className="px-6 py-3 border cursor-pointer border-white/20 text-white rounded-xl hover:bg-white/10 transition">
+                        <button
+                            onClick={() => {
+                                navigate("/contact-page")
+                                window.scrollTo(0, 0);
+                            }}
+                            className="px-6 py-3 border cursor-pointer border-white/20 text-white rounded-xl hover:bg-white/10 transition">
                             Learn More
                         </button>
                     </div>

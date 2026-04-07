@@ -6,25 +6,25 @@ const TrainingFeatures = () => {
             icon: BookOpen,
             title: "Expert Curriculum",
             desc: "Programs crafted by industry veterans who have built full-stack systems at scale, not books in educational filtering.",
-            img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&q=80",
+            img: "/couligesImage.jpg",
         },
         {
             icon: FlaskConical,
             title: "Hands-on Labs",
             desc: "Access cloud-native environments to learn, break, and fix real applications in a sandbox-craft setting.",
-            img: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=400&q=80",
+            img: "/couligesImage2.jpg",
         },
         {
             icon: FolderKanban,
             title: "Case Studies",
             desc: "Work on real-world business problems, inspired by actual consulting projects from our portfolio.",
-            img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&q=80",
+            img: "/couligesImage3.jpg",
         },
         {
             icon: Briefcase,
             title: "Job Placement",
             desc: "Our dedicated career track helps you bridge the gap between training and your first professional contract.",
-            img: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=80",
+            img: "/placements.jpg",
         },
     ];
 

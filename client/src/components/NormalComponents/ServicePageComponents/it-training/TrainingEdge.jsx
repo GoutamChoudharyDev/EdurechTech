@@ -27,7 +27,7 @@ const TrainingEdge = () => {
                 <div className="relative">
                     <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
                         <img
-                            src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80"
+                            src="/IT_trainingImage.jpg"
                             alt="Professional working on laptop"
                             className="w-full h-full object-cover"
                         />
