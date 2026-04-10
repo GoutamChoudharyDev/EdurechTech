@@ -5,18 +5,21 @@ const SoftwareDevHero = () => {
     const navigate = useNavigate();
 
     return (
-        <section className="min-h-screen flex items-center bg-gradient-to-br from-[#020617] via-[#020617] to-[#0f172a] px-6 pt-24 pb-6 md:pt-6 md:px-16">
+        <section className="min-h-screen flex items-center bg-gradient-to-br from-[#020617] via-[#020617] to-[#0f172a] px-6 pt-2 md:pt-10 pb-8 md:pt-6 md:px-16">
             <div className="max-w-[1250px] mx-auto w-full grid md:grid-cols-2 gap-6  items-center">
                 {/* LEFT CONTENT */}
                 <div>
-                    <span className="text-xs bg-[#111827] px-3 py-1 rounded-full border border-gray-700">
-                        SOFTWARE DEVELOPMENT
-                    </span>
+                    {/* Badge */}
+                    <div className="inline-block bg-[#0b1a2e] border border-white/10 px-4 py-2 rounded-full mb-6">
+                        <p className="text-orange-400 text-xs tracking-widest">
+                            SOFTWARE DEVELOPMENT
+                        </p>
+                    </div>
 
-                    <h1 className="text-4xl sm:text-5xl md:text-5xl font-bold leading-tight mt-4">
-                        Bespoke <br />
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.1] mt-4">
+                        Custom <br />
                         <span className="text-orange-500">Software</span> <br />
-                        Solutions.
+                        Solutions
                     </h1>
 
                     <p className="text-gray-400 mt-4 text-sm md:text-base max-w-md">

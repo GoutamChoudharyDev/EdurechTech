@@ -5,8 +5,7 @@ const DigitalHero = () => {
     const navigate = useNavigate();
 
     return (
-        <section className="min-h-screen flex items-center bg-gradient-to-br from-[#020617] via-[#020617] to-[#0f172a] px-6 pt-24 pb-6 md:pt-6 md:px-16 relative overflow-hidden">
-
+        <section className="min-h-screen flex items-center bg-gradient-to-br from-[#020617] via-[#020617] to-[#0f172a] px-6 pb-8 md:pt-6 md:px-16">
             {/* Subtle grid background */}
             <div
                 className="absolute inset-0 opacity-10 pointer-events-none"
@@ -32,7 +31,7 @@ const DigitalHero = () => {
                     {/* Heading */}
                     <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.1] text-gray-200">
                         Mastering the{" "}
-                        <span className="text-orange-400 italic">Digital</span>
+                        <span className="text-orange-400">Digital</span>
                         <br />
                         Landscape
                     </h1>

@@ -21,11 +21,11 @@ const CoreEcosystem = () => {
     ];
 
     return (
-        <section className="bg-[#020617] px-6 md:px-16 py-12 md:py-20">
+        <section className="bg-[#020617] px-6 md:px-16 py-6 md:py-20">
             <div className="max-w-[1250px] mx-auto w-full">
 
                 {/* Heading */}
-                <div className="mb-12">
+                <div className="mb-6">
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-200 mb-1">
                         Core Ecosystem
                     </h2>

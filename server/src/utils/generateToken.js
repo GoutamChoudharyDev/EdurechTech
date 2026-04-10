@@ -10,4 +10,4 @@ const generateToken = (payload) => {
 
 }
 
-module.exports = generateToken
+export default generateToken;

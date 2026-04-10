@@ -1,61 +1,3 @@
-// const Hero = () => {
-//     //     return (
-//     //         <main className="p-0">
-//     //             <section className="relative text-center flex flex-col items-center justify-center min-h-screen text-white overflow-hidden
-//     // bg-gradient-to-br from-[#0f172a] via-[#020617] to-[#020617]">
-
-//     //                 {/* Floating Shapes */}
-//     //                 <div className="absolute inset-0 z-[1] overflow-hidden">
-
-//     //                     <div className="absolute top-[10%] left-[10%] w-[60px] h-[60px] rounded-full opacity-10 
-//     //           bg-gradient-to-br from-[#ff6b35] to-[#f7931e] animate-float"></div>
-
-//     //                     <div className="absolute top-[20%] right-[15%] w-[40px] h-[40px] rounded-[20%] opacity-10 
-//     //           bg-gradient-to-br from-[#667eea] to-[#764ba2] animate-float delay-[1000ms]"></div>
-
-//     //                     <div className="absolute bottom-[30%] left-[20%] w-[50px] h-[50px] rounded-[10px] opacity-10 
-//     //           bg-gradient-to-br from-[#f7931e] to-[#ff6b35] animate-float delay-[2000ms]"></div>
-
-//     //                     <div className="absolute bottom-[10%] right-[10%] w-[70px] h-[70px] rounded-full opacity-10 
-//     //           bg-gradient-to-br from-[#764ba2] to-[#667eea] animate-float delay-[3000ms]"></div>
-
-//     //                     <div className="absolute top-[40%] left-[5%] w-[35px] h-[35px] rounded-full opacity-10 
-//     //           bg-gradient-to-br from-[#ff6b35] to-[#667eea] animate-float delay-[4000ms]"></div>
-
-//     //                     <div className="absolute top-[60%] right-[25%] w-[45px] h-[45px] rounded-[15px] opacity-10 
-//     //           bg-gradient-to-br from-[#f7931e] to-[#764ba2] animate-float delay-[5000ms]"></div>
-//     //                 </div>
-
-//     //                 {/* Content */}
-//     //                 <div className="relative z-[2] max-w-7xl mx-auto px-6">
-
-//     //                     <h1 className="text-3xl sm:text-5xl md:text-7xl mb-5 font-bold
-//     // bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent animate-slideDown">
-
-//     //                         Powering Careers & Businesses with
-
-//     //                         <span className="block mt-4 md:mt-6">
-//     //                             Future-Ready Technology
-//     //                         </span>
-
-//     //                     </h1>
-
-//     //                     <p className="text-lg md:text-2xl mb-6 opacity-90 animate-fadeUp">
-//     //                         Cloud • AI • Software • IT Consulting • Career Enablement
-//     //                     </p>
-
-//     //                     <p className="text-lg max-w-[800px] mx-auto mb-10 opacity-80 leading-8 animate-fadeUp delay-300">
-//     //                         Edurech Technology is a next-generation IT consulting and career
-//     //                         enablement company helping students, professionals, and businesses
-//     //                         succeed in the digital era. From cloud-native development and AI-driven solutions to staffing,
-//     //                         resume marketing, and interview readiness — we don’t just provide
-//     //                         services, we deliver outcomes.
-//     //                     </p>
-//     //                 </div>
-//     //             </section>
-//     //         </main>
-//     //     );
-
 import { Brain, Cloud, Code } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -63,9 +5,7 @@ const Hero = () => {
     const navigate = useNavigate();
 
     return (
-        <section className="relative pt-22 md:pt-10 min-h-screen flex items-center bg-gradient-to-br from-[#0f172a] via-[#020617] to-[#020617] overflow-hidden">
-
-
+        <section className="relative pt-22 md:pt-16 min-h-screen flex items-center bg-gradient-to-br from-[#0f172a] via-[#020617] to-[#020617] overflow-hidden">
             {/* Floating Glow */}
             <div className="absolute inset-0 z-[1]">
                 <div className="absolute top-[10%] left-[10%] w-16 h-16 rounded-full bg-orange-400/10 blur-xl animate-pulse"></div>
@@ -87,10 +27,10 @@ const Hero = () => {
 
                     {/* Heading */}
                     <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.1] text-[#cbd5f5]">
-                        Forging the{" "}
+                        Building the{" "}
                         <span className="text-orange-400">Digital</span>
                         <br />
-                        <span className="text-orange-400">Future.</span>
+                        <span className="text-orange-400">Future</span>
                     </h1>
 
                     {/* Description */}

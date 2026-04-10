@@ -20,7 +20,7 @@ const ProfileYields = () => {
     ];
 
     return (
-        <section className="bg-[#020617] px-6 md:px-16 py-12 md:py-20">
+        <section className="bg-[#020617] px-6 md:px-16  md:py-15">
             <div className="max-w-[1250px] mx-auto w-full grid md:grid-cols-2 gap-8 md:gap-12 items-center">
 
                 {/* LEFT — Image */}
@@ -40,7 +40,7 @@ const ProfileYields = () => {
                 {/* RIGHT — Content */}
                 <div>
                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-200 leading-tight mb-8">
-                        Strategic{" "}
+                        Profile {" "}
                         <span className="text-orange-400">Yields</span>
                     </h2>
 

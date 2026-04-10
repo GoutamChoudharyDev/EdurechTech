@@ -4,8 +4,7 @@ import { useNavigate } from "react-router-dom";
 const ProfileHero = () => {
     const navigate = useNavigate()
     return (
-        <section className="min-h-screen flex items-center bg-gradient-to-br from-[#020617] via-[#020617] to-[#0f172a] px-6 pt-24 pb-6 md:pt-6 md:px-16 relative overflow-hidden">
-
+        <section className="min-h-screen flex items-center bg-gradient-to-br from-[#020617] via-[#020617] to-[#0f172a] px-6 pb-8 md:pt-6 md:px-16">
             {/* Subtle grid background */}
             <div
                 className="absolute inset-0 opacity-10 pointer-events-none"
@@ -31,7 +30,7 @@ const ProfileHero = () => {
                     {/* Heading */}
                     <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.1] text-gray-200">
                         Build Your{" "}
-                        <span className="text-orange-400 italic">Digital</span>
+                        <span className="text-orange-400">Digital</span>
                         <br />
                         Authority.
                     </h1>
@@ -46,14 +45,14 @@ const ProfileHero = () => {
                     {/* Buttons */}
                     <div className="mt-6 flex flex-wrap gap-6">
                         <button
-                        onClick={()=>navigate("/contact-page")}
-                        className="bg-orange-400 cursor-pointer text-black px-6 py-3 rounded-xl font-medium hover:bg-orange-300 transition flex items-center gap-2">
+                            onClick={() => navigate("/contact-page")}
+                            className="bg-orange-400 cursor-pointer text-black px-6 py-3 rounded-xl font-medium hover:bg-orange-300 transition flex items-center gap-2">
                             Launch Your Brand <ArrowRight size={18} />
                         </button>
 
                         <button
-                        onClick={()=>navigate("/contact-page")}
-                        className="border cursor-pointer border-white/10 px-6 py-3 rounded-xl text-gray-300 hover:border-orange-400 hover:text-white transition">
+                            onClick={() => navigate("/contact-page")}
+                            className="border cursor-pointer border-white/10 px-6 py-3 rounded-xl text-gray-300 hover:border-orange-400 hover:text-white transition">
                             View Process
                         </button>
                     </div>
@@ -63,7 +62,7 @@ const ProfileHero = () => {
                 <div className="relative">
                     <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
                         <img
-                            src=""
+                            src="/profileMarketing.jpg"
                             alt="Professional Business Portrait"
                             className="w-full h-full object-cover"
                         />

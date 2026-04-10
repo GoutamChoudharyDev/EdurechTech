@@ -5,14 +5,16 @@ const WebDevHero = () => {
     let navigate = useNavigate();
 
     return (
-        <section className="min-h-screen flex items-center bg-gradient-to-br from-[#020617] via-[#020617] to-[#0f172a] px-6 pt-24 pb-6 md:pt-6 md:px-16">
+        <section className="min-h-screen flex items-center bg-gradient-to-br from-[#020617] via-[#020617] to-[#0f172a] px-6 pt-2 pb-6 md:pt-6 md:px-16">
             <div className="max-w-[1250px] mx-auto w-full grid md:grid-cols-2 gap-6  items-center">
 
                 {/* LEFT CONTENT */}
                 <div>
                     {/* Badge */}
                     <div className="inline-block bg-[#0b1a2e] border border-white/10 px-4 py-2 rounded-full mb-6">
-                        <p className="text-sm text-gray-300">Modern Web Solutions</p>
+                        <p className="text-orange-400 text-xs tracking-widest">
+                            Modern Web Solutions
+                        </p>
                     </div>
 
                     {/* Heading */}

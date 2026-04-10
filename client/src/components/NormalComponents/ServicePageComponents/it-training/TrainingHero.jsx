@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const TrainingHero = () => {
     const navigate = useNavigate();
     return (
-        <section className="min-h-screen flex items-center bg-gradient-to-br from-[#020617] via-[#020617] to-[#0f172a] px-6 pt-24 pb-6 md:pt-6 md:px-16 relative overflow-hidden">
+        <section className="min-h-screen flex items-center bg-gradient-to-br from-[#020617] via-[#020617] to-[#0f172a] px-6 pb-8 md:pt-6 md:px-16">
 
             {/* Subtle grid background */}
             <div
@@ -31,7 +31,7 @@ const TrainingHero = () => {
                     {/* Heading */}
                     <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-[1.1] text-gray-200">
                         Comprehensive IT{" "}
-                        <span className="text-orange-400 italic">Training</span>
+                        <span className="text-orange-400">Training</span>
                         <br />
                         Programs
                     </h1>

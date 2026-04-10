@@ -19,7 +19,7 @@ const StrategicImpact = () => {
     ];
 
     return (
-        <section className="bg-[#020C1B] px-6 md:px-16 py-12 md:py-24">
+        <section className="bg-[#020C1B] px-6 md:px-16 pb-8 md:py-24">
             <div className="max-w-[1250px] mx-auto grid lg:grid-cols-2 gap-8 md:gap-16 items-start">
 
                 {/* LEFT */}
